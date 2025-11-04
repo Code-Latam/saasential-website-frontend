@@ -1,0 +1,14 @@
+---
+import {portfolios as port} from '../../data/portfolios';
+import PortfolioLayout from '../../layouts/PortfolioLayout.astro';
+
+export async function getStaticPaths() {
+    return port.map((portfolio) => ({
+        params: { slug: portfolio.slug },
+        props: { portfolios: portfolio },
+    }));
+}
+const { portfolios } = Astro.props;
+---
+
+<PortfolioLayout {portfolios} />

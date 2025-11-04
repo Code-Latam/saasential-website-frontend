@@ -1,0 +1,51 @@
+---
+const {title, description, link, icon} = Astro.props;
+---
+
+<div class="group relative flex flex-col border border-gray-300 rounded-2xl p-8 h-full bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400 overflow-hidden shadow-sm "
+>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-indigo-400/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+    <div class="relative flex flex-col h-full">
+        <div class="mb-6">
+            <div class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <img
+                        src={icon}
+                        alt={title}
+                        class="w-8 h-8 object-contain"
+                />
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                {title}
+            </h3>
+            <div class="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full group-hover:w-24 transition-all duration-500"></div>
+        </div>
+
+        <p class="text-gray-600 leading-relaxed mb-6 flex-grow">
+            {description}
+        </p>
+
+        <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-6 group-hover:via-blue-300 transition-colors duration-300"></div>
+
+        <a
+                href={link}
+                class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-all duration-300 group/link"
+        >
+            <span class="cursor-pointer">Explore More</span>
+            <svg
+                    class="w-5 h-5 transform group-hover/link:translate-x-2 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+            >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,163 @@
+---
+import approach1 from '../assets/images/approach-img1.png';
+import approach2 from '../assets/images/approach-img2.png';
+import approach3 from '../assets/images/approach-img3.png';
+import approach4 from '../assets/images/approach-img4.png';
+
+
+const steps = [
+    {
+        step: "STEP 01",
+        title: "Discovery & Consultation",
+        desc: `We initiate with a thorough exploration of your needs and objectives to establish a solid foundation for success.`,
+        points: [
+            "Initial Consultation: Engage in detailed discussions to understand your business goals.",
+        ],
+        img: approach1,
+    },
+    {
+        step: "STEP 02",
+        title: "Planning & Strategy",
+        desc: `We craft a comprehensive plan for efficient execution and measurable outcomes.`,
+        points: [
+            "Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.","Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+            "Roadmap Creation: Define project milestones and timelines for successful delivery.",
+        ],
+        img: approach2,
+    },
+    {
+        step: "STEP 03",
+        title: "Development & Execution",
+        desc: `We execute the plan with precision, delivering high-quality solutions on time and within scope.`,
+        points: [
+            "Agile Development: Apply agile methodologies for adaptive and iterative progress.",
+            "Quality Assurance: Conduct thorough testing before deployment.",
+        ],
+        img: approach3,
+    },
+    {
+        step: "STEP 04",
+        title: "Support & Optimization",
+        desc: `Post-launch, we provide ongoing support and enhancements to ensure your solution evolves with your needs.`,
+        points: [
+            "Ongoing Maintenance: Offer regular updates and technical support.",
+            "Performance Analysis: Review performance metrics for continuous improvement.",
+        ],
+        img: approach4,
+    },
+];
+---
+
+<section class="py-20 bg-white" id="approach">
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Heading -->
+        <div class="flex justify-between items-center mb-12 portfolio-header">
+            <div>
+                <div class="flex items-center gap-2 mb-3 fade-in-up" style="animation-delay: 0.1s;">
+                    <span class="text-blue-400 text-lg">✱</span>
+                    <span class="text-blue-400 font-semibold tracking-wide uppercase text-sm">WORKFLOW INSIGHTS</span>
+                    <span class="text-blue-400 text-lg">✱</span>
+                </div>
+                <h2 class="text-5xl font-bold text-gray-900 fade-in-up" style="animation-delay: 0.2s;">
+                    The Saasential Approach
+                </h2>
+            </div>
+        </div>
+
+        <!-- Step Images Timeline -->
+        <div class="relative flex justify-between items-start mb-8">
+            <!-- Timeline Line -->
+            <div class="absolute top-[196px] left-0 w-full h-[1px] bg-[#eee] z-0"></div>
+
+            {steps.map((step) => (
+                    <div class="relative z-10 flex flex-col items-center w-1/4">
+                        <div class="w-44 h-44 mb-4 flex items-center justify-center">
+                            <img src={step.img.src} alt={step.title} class="w-full h-full object-contain" />
+                        </div>
+                        <div class="relative flex flex-col items-center">
+                            <!-- Vertical line before dot -->
+                            <div class="w-2.5 h-2.5 bg-black rounded-full"></div>
+                            <div class="h-10 w-[1px] bg-[#eee]  mb-0"></div>
+                            <!-- Dot -->
+                        </div>
+                    </div>
+            ))}
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-4 gap-6">
+            {steps.map((step, index) => (
+                    <div class="card-hover relative w-full h-[420px] bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-md border border-gray-200 overflow-hidden" data-card={index}>
+                        <div class="card-content p-6">
+                            <p class="text-blue-500 font-semibold text-xs mb-2 tracking-wide">{step.step}</p>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">{step.title}</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">{step.desc}</p>
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                {step.points.map((point) => {
+                                    const [label, ...rest] = point.split(':');
+                                    return (
+                                            <li class="flex">
+                                                <span class="mr-2">•</span>
+                                                <span>
+                                            <strong class="font-semibold text-gray-900">{label}:</strong>
+                                                    {rest.length > 0 && <span class="text-gray-600">{rest.join(':')}</span>}
+                                        </span>
+                                            </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                    </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .card-content {
+        transition: transform 10s ease-in-out;
+
+    }
+
+    .card-hover:hover .card-content {
+        transform: translateY(calc(-100% + 420px));
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.card-hover');
+
+        cards.forEach(card => {
+            const content = card.querySelector('.card-content');
+
+            card.addEventListener('mouseenter', () => {
+                const contentHeight = content!.scrollHeight;
+                const cardHeight = 420;
+
+                if (contentHeight > cardHeight) {
+                    content!.style.transform = `translateY(-${contentHeight - cardHeight}px)`;
+                }
+            });
+
+            card.addEventListener('mouseleave', () => {
+                content!.style.transform = 'translateY(0)';
+            });
+        });
+    });
+</script>

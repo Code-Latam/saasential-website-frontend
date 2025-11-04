@@ -1,0 +1,283 @@
+---
+import ContactSection from "../../components/ContactSection.astro";
+import Footer from "../../components/Footer.astro";
+import {portfolios} from "../../data/portfolios";
+import PortfolioCard from "../../components/PortfolioCard.astro";
+import Navbar from "../../components/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
+import '../../styles/global.css';
+
+---
+<Layout>
+    <Navbar/>
+    <section class="bg-white min-h-screen flex flex-col">
+
+        <!-- ===== Hero Header ===== -->
+        <div class="relative w-full h-[500px] mb-20">
+            <div class="absolute inset-0 overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-black">
+                <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e3a8a_1px,transparent_1px),linear-gradient(to_bottom,#1e3a8a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-10"></div>
+
+                <!-- Animated gradient orbs -->
+                <div class="absolute inset-0">
+                    <div class="absolute top-20 left-10 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob"></div>
+                    <div class="absolute top-40 right-10 w-96 h-96 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+                    <div class="absolute bottom-20 left-1/2 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-blob animation-delay-4000"></div>
+                </div>
+
+                <!-- Gradient overlay -->
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60"></div>
+            </div>
+
+            <!-- Breadcrumb -->
+            <div class="relative z-10 max-w-7xl mx-auto px-6 pt-32">
+                <nav class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-sm text-white shadow-lg" data-aos="fade-down">
+                    <a href="/" class="hover:text-blue-400 transition-colors flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                        Home
+                    </a>
+                    <svg class="w-4 h-4 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <a href="/our-work" class="text-blue-400 font-medium">Our Work</a>
+                </nav>
+            </div>
+
+            <!-- Hero Title -->
+            <div class="relative z-10 max-w-7xl mx-auto px-6 mt-10">
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+                    Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Creative</span> Work
+                </h1>
+
+                <p class="text-xl text-white/80 max-w-2xl mb-8" data-aos="fade-up" data-aos-delay="200">
+                    Explore our portfolio of successful projects that showcase innovation, creativity, and measurable results.
+                </p>
+
+                <div class="h-1.5 w-24 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full" data-aos="fade-right" data-aos-delay="300"></div>
+            </div>
+
+            <!-- Scroll Down Arrow -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+                <div class="flex flex-col items-center gap-2 animate-bounce">
+                    <span class="text-white/60 text-sm font-medium">Scroll Down</span>
+                    <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Filter Section (Optional) ===== -->
+       <!-- <div class="relative z-10 max-w-7xl mx-auto px-6 mb-12" data-aos="fade-up">
+            <div class="flex flex-wrap items-center justify-between gap-6">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Featured Projects</h2>
+                    <p class="text-gray-600">Discover how we've helped our clients achieve their goals</p>
+                </div>
+
+                &lt;!&ndash; Filter buttons (optional) &ndash;&gt;
+                <div class="flex flex-wrap gap-3">
+                    <button class="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-full hover:from-blue-500 hover:to-indigo-500 transition-all transform hover:scale-105 active:scale-95 shadow-lg">
+                        All Projects
+                    </button>
+                    <button class="px-5 py-2.5 bg-white text-gray-700 font-medium rounded-full hover:bg-gray-100 transition-all border border-gray-200">
+                        FinTech
+                    </button>
+                    <button class="px-5 py-2.5 bg-white text-gray-700 font-medium rounded-full hover:bg-gray-100 transition-all border border-gray-200">
+                        SaaS
+                    </button>
+                    <button class="px-5 py-2.5 bg-white text-gray-700 font-medium rounded-full hover:bg-gray-100 transition-all border border-gray-200">
+                        Mobile Apps
+                    </button>
+                </div>
+            </div>
+        </div>-->
+
+        <!-- ===== Our Work Grid ===== -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {
+                    portfolios.map((portfolio, i) => (
+                            <div
+                                    data-aos="fade-up"
+                                    data-aos-delay={i * 100}
+                            >
+                                <PortfolioCard
+                                        title={portfolio.title}
+                                        description={portfolio.shortDesc}
+                                        category={portfolio.category}
+                                        image={portfolio.image}
+                                        link={"/our-work/" + portfolio.slug}
+                                />
+                            </div>
+                    ))
+                }
+            </div>
+        </div>
+
+        <!-- ===== Stats Section ===== -->
+        <!--<div class="relative z-10 max-w-7xl mx-auto px-6 pb-20">
+            <div class="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-12 md:p-16 relative overflow-hidden" data-aos="fade-up">
+                &lt;!&ndash; Background pattern &ndash;&gt;
+                <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-10"></div>
+
+                <div class="relative">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
+                        <p class="text-white/90 text-lg">Results that speak for themselves</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="text-4xl md:text-5xl font-bold text-white mb-2">50+</div>
+                            <div class="text-white/80">Projects Delivered</div>
+                        </div>
+                        <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="text-4xl md:text-5xl font-bold text-white mb-2">98%</div>
+                            <div class="text-white/80">Client Satisfaction</div>
+                        </div>
+                        <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="text-4xl md:text-5xl font-bold text-white mb-2">24/7</div>
+                            <div class="text-white/80">Support Available</div>
+                        </div>
+                        <div class="text-center" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="text-4xl md:text-5xl font-bold text-white mb-2">15+</div>
+                            <div class="text-white/80">Countries Served</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <!-- ===== CTA Section ===== -->
+        <!--<div class="relative z-10 max-w-7xl mx-auto px-6 pb-20">
+            <div class="bg-white rounded-3xl p-12 md:p-16 shadow-2xl border border-gray-200" data-aos="fade-up">
+                <div class="max-w-3xl mx-auto text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Ready to Start Your Project?
+                    </h2>
+
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        Let's collaborate to bring your vision to life. Our team is ready to transform your ideas into exceptional digital experiences.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a
+                                href="/contact"
+                                class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all transform hover:scale-105 active:scale-95 shadow-lg"
+                        >
+                            Get Started Today
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+
+                        <a
+                                href="/services"
+                                class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all"
+                        >
+                            View Our Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </section>
+
+    <ContactSection/>
+    <Footer/>
+</Layout>
+
+<style>
+    /* Blob Animation */
+    @keyframes blob {
+        0%, 100% {
+            transform: translate(0, 0) scale(1);
+        }
+        33% {
+            transform: translate(30px, -50px) scale(1.1);
+        }
+        66% {
+            transform: translate(-20px, 20px) scale(0.9);
+        }
+    }
+
+    .animate-blob {
+        animation: blob 10s infinite;
+    }
+
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+
+    .animation-delay-4000 {
+        animation-delay: 4s;
+    }
+
+    /* AOS Animations */
+    [data-aos] {
+        opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-aos="fade-up"] {
+        transform: translateY(40px);
+    }
+
+    [data-aos="fade-down"] {
+        transform: translateY(-40px);
+    }
+
+    [data-aos="fade-left"] {
+        transform: translateX(40px);
+    }
+
+    [data-aos="fade-right"] {
+        transform: translateX(-40px);
+    }
+
+    [data-aos="zoom-in"] {
+        transform: scale(0.9);
+    }
+
+    [data-aos].aos-animate {
+        opacity: 1;
+        transform: translateY(0) translateX(0) scale(1);
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<script>
+    // Enhanced intersection observer with stagger effect
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.getAttribute('data-aos-delay') || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('aos-animate');
+                    }, parseInt(delay));
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        }
+    );
+
+    document.querySelectorAll('[data-aos]').forEach((el) => observer.observe(el));
+</script>
