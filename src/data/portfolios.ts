@@ -1,3 +1,6 @@
+// import pokytimg from '../assets/images/pokytportfolio.png'
+// import cutfree from '../assets/images/cutfreeportfolio.png'
+
 // src/content/portfolioContent.js
 
 export const portfolios = [
@@ -9,7 +12,7 @@ export const portfolios = [
         location: "United States",
         industry: "Financial Technology / Digital Payments",
         stack: ["Node.js", "Express", "React", "MongoDB Atlas", "Azure Static Web Apps", "Stripe", "Moov", "Astra", "Circle", "Redis", "GitHub Actions"],
-        image: "/images/portfolio/cellpay.webp",
+        image: '/images/portfolio/pokytportfolio.png',
         shortDesc: "A unified platform managing multiple payment methods — cards, bank transfers, and digital wallets — under one secure, scalable infrastructure with real-time reconciliation.",
         challenge: "CellPay needed a unified platform to manage multiple payment methods — cards, bank transfers, and digital wallets — under one secure, scalable infrastructure. They required a system capable of handling high transaction volumes, real-time reconciliation, and modular onboarding for merchants.",
         solution: "Saasential architected and developed a full SaaS payment platform with built-in wallet and ledger modules, instant settlement flows, and a robust API layer for third-party integrations. We focused on reliability, regulatory readiness, and ease of merchant onboarding.",
@@ -58,7 +61,7 @@ export const portfolios = [
         location: "United States",
         industry: "FinTech / Cross-border Payments",
         stack: ["API Astrolab", "Wiki.js", "Node.js", "Confluence", "Jira Service Management", "MongoDB Atlas", "Discord Integration"],
-        image: "/images/portfolio/pockyt.webp",
+        image: '/images/portfolio/cutfreeportfolio.png',
         shortDesc: "Advanced solution engineering support enabling better API product visualization, faster enterprise client onboarding, and improved internal knowledge sharing.",
         challenge: "Pockyt.io needed advanced solution engineering support for onboarding new enterprise clients, internal knowledge sharing, and API product showcasing. Their engineering and sales teams needed better visibility into how APIs interconnect and power real-world use cases.",
         solution: "Saasential provided deep solution engineering support by implementing a ticketing and documentation ecosystem using Jira and Confluence integrated through custom Node.js services. We visualized their API products and payment workflows using API Astrolab, enabling faster onboarding, testing, and client demos.",
@@ -111,7 +114,7 @@ export const portfolios = [
         location: "Sub-Saharan Africa",
         industry: "FinTech / Payments Aggregation",
         stack: ["Node.js", "Express", "React", "MongoDB Atlas", "Flutterwave", "Airtel Money", "QR Code SDKs", "Azure", "GitHub Actions"],
-        image: "/images/portfolio/africa-payments.webp",
+        image: "/images/portfolio/cofid.jpg",
         shortDesc: "A unified payments aggregator integrating multiple regional payment providers (mobile money, QR codes, bank APIs) into a single standardized API layer.",
         challenge: "The client aimed to unify multiple regional payment providers (mobile money, QR codes, and bank APIs) into a single API layer to streamline merchant acceptance and reduce technical complexity. Fragmented local integrations created high maintenance overhead and limited scalability.",
         solution: "Saasential engineered a multi-rail aggregator API that standardizes mobile money, QR, and card payments across countries. The system includes real-time transaction validation, settlement logic, and a secure dashboard for merchants. Built for reliability in bandwidth-limited environments.",

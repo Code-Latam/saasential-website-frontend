@@ -27,17 +27,18 @@ export const services = [
                 desc: "Modular design allows fast iteration and expansion of new features.",
             },
         ],
-        tools: [
-            { name: "React", icon: "/icons/react.svg" },
-            { name: "Node.js", icon: "/icons/nodejs.svg" },
-            { name: "Express", icon: "/icons/express.svg" },
-            { name: "MongoDB Atlas", icon: "/icons/mongodb.svg" },
-            { name: "PostgreSQL", icon: "/icons/postgresql.svg" },
-            { name: "Docker", icon: "/icons/docker.svg" },
-            { name: "Azure", icon: "/icons/azure.svg" },
-            { name: "GitHub Actions", icon: "/icons/github.svg" },
-            { name: "Redis", icon: "/icons/redis.svg" },
-        ],
+ tools: [
+  { name: "React", icon: "https://cdn.simpleicons.org/react" },
+  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
+  { name: "Express", icon: "https://cdn.simpleicons.org/express/000000" }, // Express logo is black
+  { name: "MongoDB Atlas", icon: "https://cdn.simpleicons.org/mongodb" },
+  { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql" },
+  { name: "Docker", icon: "https://cdn.simpleicons.org/docker" },
+  { name: "Azure", icon: "https://arunpotti.files.wordpress.com/2021/12/microsoft_azure.svg_.png" },
+  { name: "GitHub Actions", icon: "https://cdn.simpleicons.org/githubactions" },
+  { name: "Redis", icon: "https://cdn.simpleicons.org/redis" },
+]
+
     },
     {
         slug: "fintech-payments-integration",
@@ -66,15 +67,16 @@ export const services = [
                 desc: "Adaptable to local regulations, multi-currency support, and complex payout logic.",
             },
         ],
-        tools: [
-            { name: "Stripe", icon: "/icons/stripe.svg" },
-            { name: "Moov", icon: "/icons/moov.svg" },
-            { name: "Plaid", icon: "/icons/plaid.svg" },
-            { name: "PayPal", icon: "/icons/paypal.svg" },
-            { name: "Kafka", icon: "/icons/kafka.svg" },
-            { name: "Node.js", icon: "/icons/nodejs.svg" },
-            { name: "Webhooks", icon: "/icons/webhook.svg" },
-        ],
+  tools: [
+  { name: "Stripe", icon: "https://cdn.simpleicons.org/stripe" },
+  { name: "Moov", icon: "https://play-lh.googleusercontent.com/1pIMrf-HIK53Pg-b_fVzKQ_e0cPA5Y3BANNQ5V-f6zCqwfTK8D0sugl39LTiGgAl2qas" }, // ❌ not in Simple Icons — use placeholder below
+  { name: "Plaid", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt9iXEJiMRkyKe2RnFGE7Mq7t_W3CUr3P6GQ&s" },
+  { name: "PayPal", icon: "https://cdn.simpleicons.org/paypal" },
+  { name: "Kafka", icon: "https://cdn.simpleicons.org/apachekafka" },
+  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
+  { name: "Webhooks", icon: "https://cdn-icons-png.flaticon.com/512/919/919829.png" }, // ❌ also not in Simple Icons — use alternative below
+]
+
     },
     {
         slug: "api-design-workflow-visualization",
@@ -103,15 +105,17 @@ export const services = [
                 desc: "Customizable diagrams, documentation exports, and client demos.",
             },
         ],
-        tools: [
-            { name: "OpenAPI", icon: "/icons/openapi.svg" },
-            { name: "Redocly", icon: "/icons/redocly.svg" },
-            { name: "ReadMe", icon: "/icons/readme.svg" },
-            { name: "Wiki.js", icon: "/icons/wikijs.svg" },
-            { name: "React", icon: "/icons/react.svg" },
-            { name: "Node.js", icon: "/icons/nodejs.svg" },
-            { name: "Axios", icon: "/icons/axios.svg" },
-        ],
+tools: [
+  { name: "OpenAPI", icon: "https://cdn.simpleicons.org/openapiinitiative" },
+  { name: "Redocly", icon: "https://pbs.twimg.com/profile_images/1502378202316038148/nVGMA8QF.jpg" },
+  { name: "ReadMe", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGwKVO2WNyLOczKSrfXYQI5pwphywg8KlKuA&s" },
+  { name: "Wiki.js", icon: "https://www.markdownguide.org/assets/images/tool-icons/wikijs.png" },
+  { name: "React", icon: "https://cdn.simpleicons.org/react" },
+  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
+  { name: "Axios", icon: "https://cdn.simpleicons.org/axios" },
+]
+
+
     },
     {
         slug: "technical-documentation-portals",
@@ -140,14 +144,15 @@ export const services = [
                 desc: "Tailored UI/UX aligned with your brand and API structure.",
             },
         ],
-        tools: [
-            { name: "Wiki.js", icon: "/icons/wikijs.svg" },
-            { name: "Redocly", icon: "/icons/redocly.svg" },
-            { name: "SwaggerHub", icon: "/icons/swaggerhub.svg" },
-            { name: "Markdown", icon: "/icons/markdown.svg" },
-            { name: "Astro", icon: "/icons/astro.svg" },
-            { name: "React", icon: "/icons/react.svg" },
-        ],
+   tools: [
+  { name: "Wiki.js", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7yId4wxmt4l_67ZVYvwKPUQJVysIryYM8zQ&s" },          // ❌ not in Simple Icons
+  { name: "Redocly", icon: "https://pbs.twimg.com/profile_images/1502378202316038148/nVGMA8QF.jpg" },         // ❌ not in Simple Icons
+  { name: "SwaggerHub", icon: "https://cdn.simpleicons.org/swagger" }, // ✅ use Swagger (official parent)
+  { name: "Markdown", icon: "https://cdn.simpleicons.org/markdown" },  // ✅ official Markdown icon
+  { name: "Astro", icon: "https://cdn.simpleicons.org/astro" },        // ✅ official Astro icon
+  { name: "React", icon: "https://cdn.simpleicons.org/react" },        // ✅ official React icon
+]
+
     },
     {
         slug: "ai-automation-consulting",
@@ -176,15 +181,16 @@ export const services = [
                 desc: "Tailored agents and pipelines that align with specific business processes.",
             },
         ],
-        tools: [
-            { name: "LangChain", icon: "/icons/langchain.svg" },
-            { name: "OpenAI", icon: "/icons/openai.svg" },
-            { name: "TinyLlama", icon: "/icons/tinyllama.svg" },
-            { name: "MongoDB Vector Search", icon: "/icons/mongodb.svg" },
-            { name: "Python", icon: "/icons/python.svg" },
-            { name: "Node.js", icon: "/icons/nodejs.svg" },
-            { name: "Azure Cognitive Services", icon: "/icons/azure.svg" },
-        ],
+tools: [
+  { name: "LangChain", icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/langchain-ipuhh4qo1jz5ssl4x0g2a.png/langchain-dp1uxj2zn3752pntqnpfu2.png?_a=DATAg1AAZAA0" }, // ❌ not in Simple Icons
+  { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai" }, // ✅ official
+  { name: "TinyLlama", icon: "https://www.shutterstock.com/image-vector/llama-icon-animals-collection-thin-260nw-2206705893.jpg" }, // ❌ not in Simple Icons
+  { name: "MongoDB Vector Search", icon: "https://cdn.simpleicons.org/mongodb" }, // ✅ official MongoDB
+  { name: "Python", icon: "https://cdn.simpleicons.org/python" }, // ✅ official
+  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" }, // ✅ official
+  { name: "Azure Cognitive Services", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbe6SI90ijl1P3qK5YMiz_k9o1wm590JvGAQ&s" }, // ✅ official
+]
+
     },
     {
         slug: "strategic-it-consulting",
@@ -213,15 +219,16 @@ export const services = [
                 desc: "Retainer packages customized to client needs and operational pace.",
             },
         ],
-        tools: [
-            { name: "Azure", icon: "/icons/azure.svg" },
-            { name: "AWS", icon: "/icons/aws.svg" },
-            { name: "Docker", icon: "/icons/docker.svg" },
-            { name: "GitHub Actions", icon: "/icons/github.svg" },
-            { name: "Terraform", icon: "/icons/terraform.svg" },
-            { name: "Postman", icon: "/icons/postman.svg" },
-            { name: "Metabase", icon: "/icons/metabase.svg" },
-        ],
+  tools: [
+  { name: "Azure", icon: "https://arunpotti.files.wordpress.com/2021/12/microsoft_azure.svg_.png" }, // ✅ official
+  { name: "AWS", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1EyLHVr04mrdRU1VYkVycQPfd_6VbxgaALw&s" }, // ✅ official
+  { name: "Docker", icon: "https://cdn.simpleicons.org/docker" }, // ✅ official
+  { name: "GitHub Actions", icon: "https://cdn.simpleicons.org/githubactions" }, // ✅ official
+  { name: "Terraform", icon: "https://cdn.simpleicons.org/terraform" }, // ✅ official
+  { name: "Postman", icon: "https://cdn.simpleicons.org/postman" }, // ✅ official
+  { name: "Metabase", icon: "https://cdn.simpleicons.org/metabase" }, // ✅ official
+]
+
     },
 ];
 
