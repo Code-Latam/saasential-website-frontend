@@ -1,7 +1,7 @@
 
 export const heroContent = {
     badge: {
-        text: "Your Trusted Software Development Partner",
+        text: "FinTech Innovation",
         pulse: true
     },
 
@@ -10,7 +10,7 @@ export const heroContent = {
         highlighted: "modern FinTech and SaaS innovation"
     },
 
-    subtitle: "At Saasential, our mission is to help FinTechs, startups, and enterprise teams move from concept to production - faster, smarter, and safer. We combine deep technical expertise in API architecture, digital payments, and automation with modern cloud infrastructure to build systems that are both intelligent and compliant.",
+    subtitle: "Saasential LLC is a Wyoming-based software and consulting company that designs and builds scalable SaaS and FinTech platforms. We turn complex financial and API ecosystems into simple, automated, and compliant digital products",
 
     cta: {
         text: "Schedule a Free Consultation",
@@ -26,7 +26,7 @@ export const heroContent = {
 
 export const aboutContent = {
     badge: {
-        text: "Expertise You Can Trust",
+        text: "Our Story",
         icon: "clock" // options: clock, star, shield
     },
 
@@ -36,28 +36,18 @@ export const aboutContent = {
 
     intro: {
         companyName: "Saasential",
-        description: "is a U.S.-based technology company headquartered in Wyoming, focused on building high-impact software solutions for FinTech innovators worldwide."
+        description: "our mission is to help FinTechs, startups, and enterprise teams move from concept to production - faster, smarter, and safer.\n" +
+            "We combine deep technical expertise in API architecture, digital payments, and automation with modern cloud infrastructure to build systems that are both intelligent and compliant"
     },
 
     paragraphs: [
         {
             text: "As the company behind",
             highlight: "API Astrolab",
-            continuation: "— our visual platform for API design, testing, and sales enablement — we empower teams to accelerate API adoption and streamline developer onboarding."
-        },
-        {
-            text: "Beyond our product suite, Saasential offers:",
-            isList: true
+            link: "https://www.apiastrolab.com/en/",
+            continuation: " our visual platform for API design, testing, and sales enablement, we empower teams to accelerate API adoption and streamline developer onboarding."
         }
     ],
-
-    services: [
-        "Custom platform development tailored for FinTech startups and scaleups",
-        "On-demand Solutions Engineers for onboarding new clients",
-        "Cross-border payment infrastructure expertise for global payout and pay-in strategies"
-    ],
-
-    conclusion: "Whether you're building or expanding a payments platform, entering new markets, or elevating customer experience — Saasential delivers the strategy and technical firepower to make it happen.",
 
     secondParagraph: "Join us on a journey where innovation meets expertise. Together, we'll shape the future, transforming your vision into a powerful digital reality. Whether you're looking to innovate your current systems or embark on a new technological venture, Saasential is your trusted partner for success in the ever-evolving digital landscape.",
 
@@ -125,7 +115,100 @@ export const faqContent = {
         },
         {
             question: "How can I get a quote or consultation?",
-            answer: "You can request a consultation directly through our website or schedule a call via our Calendly link (https://calendly.com/steven-apiastrolab/30min).\n\nDuring the call, we'll discuss your goals, current systems, and technical needs. Within a few days, we'll provide a tailored proposal outlining the best approach, estimated timeline, and cost.\n\nFor general inquiries, contact us at info@saasential.tech."
+            answer: "You can request a consultation directly through our website or schedule a call via our",
+            highlight:"Calendly",
+            link: "https://calendly.com/steven-apiastrolab/30min",
+            continuation: "\nDuring the call, we'll discuss your goals, current systems, and technical needs. Within a few days, we'll provide a tailored proposal outlining the best approach, estimated timeline, and cost.\n\nFor general inquiries, contact us at info@saasential.tech.",
         }
     ]
 };
+
+export const contactContent = {
+    badge: {
+        text: "Drop Us a Line",
+    },
+    heading: {
+        main: "Connect with Saasential",
+        subtitle: "Ready to take the first step towards unlocking opportunities, realizing goals, and embracing innovation? We're here and eager to connect."
+    },
+    phone: "+1 (307) 3945087",
+    email: "info@saasential.com",
+    address: "5830 E 2nd St, Ste 7000 #19416, Casper, Wyoming 82609 US",
+    socials: [
+        {name: "LinkedIn", icon: "fa7-brands:linkedin", link: "https://www.linkedin.com/company/saasential-llc"},
+        /*{name: "Twitter", icon: "fa7-brands:x-twitter", link: "#"},
+        {name: "Instagram", icon: "fa7-brands:instagram", link: "#"},*/
+    ],
+}
+
+export const approachContent = {
+    badge: {
+        text: "WORKFLOW INSIGHTS",
+    },
+
+    heading: {
+        main: "The Saasential Approach",
+    },
+
+    steps: [
+        {
+            step: "Step 01",
+            title: "Discovery & Consultation",
+            description: "We initiate with a thorough exploration of your needs and objectives to establish a solid foundation for success.",
+            points: [
+                "Initial Consultation: Engage in detailed discussions to understand your business goals.",
+                "Needs Assessment: Evaluate specific requirements and identify key challenges.",
+                "Opportunity Analysis: Recognize growth opportunities and areas for innovation.",
+                "Strategic Alignment: Develop a clear plan that aligns with your vision and goals."
+            ],
+            img: "/images/approach-img1.png"
+        },
+        {
+            step: "Step 02",
+            title: "Design & Planning",
+            description: "Our team creates a comprehensive strategy and design plan to guide the development process effectively.",
+            points: [
+                "Concept Development: Craft detailed design concepts and project outlines.",
+                "Prototyping: Build prototypes to visualize the solution and incorporate feedback.",
+                "Roadmap Creation: Define project milestones and timelines for successful delivery.",
+                "Resource Planning: Allocate resources and technologies to ensure a smooth execution."
+            ],
+            img: "/images/approach-img2.png"
+        },
+        {
+            step: "Step 03",
+            title: "Development & Execution",
+            description: "We execute the plan with precision, delivering high-quality solutions on time and within scope.",
+            points: [
+                "Agile Development: Apply agile methodologies for adaptive and iterative progress.",
+                "Quality Assurance: Conduct thorough testing to guarantee optimal performance and reliability.",
+                "Deployment: Implement a seamless deployment strategy for a successful launch.",
+                "Performance Monitoring: Continuously track and optimize post-launch performance."
+            ],
+            img: "/images/approach-img3.png"
+        },
+        {
+            step: "Step 04",
+            title: "Support & Optimization",
+            description: "Post-launch, we provide ongoing support and enhancements to ensure your solution remains effective and evolves with your needs.",
+            points: [
+                "Ongoing Maintenance: Offer regular updates and technical support.",
+                "Performance Analysis: Review performance metrics and user feedback.",
+                "Continuous Improvement: Make iterative improvements based on insights and evolving requirements.",
+                "Long-Term Partnership: Build a collaborative relationship for sustained success."
+            ],
+            img: "/images/approach-img4.png"
+        }
+    ]
+}
+
+export const footerContent = {
+    description: "Building the engines that power modern FinTech and SaaS innovation",
+     footerLinks : [
+        { name: "Home", href: "/" },
+        { name: "Services", href: "/services" },
+        { name: "Portfolio", href: "/our-work" },
+        { name: "Contact", href: "/contact" },
+    ],
+
+}

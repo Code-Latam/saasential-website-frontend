@@ -1,5 +1,7 @@
 ---
 const {title, description, link, icon} = Astro.props;
+import { Image } from 'astro:assets';
+
 ---
 
 <div class="group relative flex flex-col border border-gray-300 rounded-2xl p-8 h-full bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400 overflow-hidden shadow-sm "
@@ -11,9 +13,11 @@ const {title, description, link, icon} = Astro.props;
     <div class="relative flex flex-col h-full">
         <div class="mb-6">
             <div class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                <img
+                <Image
                         src={icon}
                         alt={title}
+                        width={32}
+                        height={32}
                         class="w-8 h-8 object-contain"
                 />
             </div>

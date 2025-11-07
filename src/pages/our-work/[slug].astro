@@ -1,6 +1,7 @@
 ---
 import {portfolios as port} from '../../data/portfolios';
 import PortfolioLayout from '../../layouts/PortfolioLayout.astro';
+import SEO from "../../components/SEO.astro";
 
 export async function getStaticPaths() {
     return port.map((portfolio) => ({
@@ -10,5 +11,11 @@ export async function getStaticPaths() {
 }
 const { portfolios } = Astro.props;
 ---
-
+<SEO
+        title={`${portfolios.title}`}
+        description={portfolios.shortDesc}
+        keywords={`${portfolios.category}, Saasential, SaaS development, FinTech solutions, software consulting, cloud architecture, API automation`}
+        image={portfolios.image}
+        url={`https://saasential.com/our-work/${portfolios.slug}`}
+/>
 <PortfolioLayout {portfolios} />

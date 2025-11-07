@@ -1,11 +1,16 @@
+---
+import SEO from "../components/SEO.astro";
+---
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<SEO
+			title="Saasential – Building the Engines that Power Modern FinTech & SaaS Innovation"
+			description="Wyoming-based software and consulting company specializing in scalable SaaS, FinTech, and API-driven platforms."
+			keywords="SaaS development, FinTech consulting, API integration, Astro, TailwindCSS, Node.js"
+			image="/logo/saasential_logo.svg"
+			url="https://saasential.com"
+		/>
 	</head>
 	<body>
 		<slot />

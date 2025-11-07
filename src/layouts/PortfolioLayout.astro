@@ -4,10 +4,10 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 import ContactSection from "../components/ContactSection.astro";
-
 const { portfolios } = Astro.props;
----
+import { Image } from 'astro:assets';
 
+---
 <Layout>
     <Navbar />
 
@@ -95,7 +95,7 @@ const { portfolios } = Astro.props;
                 <!-- Hero Image -->
                 <div class="group relative overflow-hidden rounded-3xl shadow-2xl" data-aos="fade-up">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all"></div>
-                    <img src={portfolios.image} alt={portfolios.title} class="relative w-full object-cover rounded-3xl transform group-hover:scale-105 transition-transform duration-700" />
+                    <Image height={400} width={400} src={portfolios.image} alt={portfolios.title} class="relative w-full object-cover rounded-3xl transform group-hover:scale-105 transition-transform duration-700" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
 
@@ -165,7 +165,7 @@ const { portfolios } = Astro.props;
                     </div>
 
                     <div class="grid md:grid-cols-3 gap-6">
-                        {portfolios.results.map((result, i) => (
+                        {portfolios.results.map((result:any, i:any) => (
                                 <div
                                         class="group relative bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 overflow-hidden"
                                         data-aos="zoom-in"
@@ -227,7 +227,7 @@ const { portfolios } = Astro.props;
                             <div>
                                 <p class="text-sm text-gray-500 mb-3">Technology Stack</p>
                                 <div class="flex flex-wrap gap-2">
-                                    {portfolios.stack.map((tech) => (
+                                    {portfolios.stack.map((tech:any) => (
                                             <span class="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 text-sm font-medium rounded-lg border border-blue-200">
                                             {tech}
                                         </span>
@@ -287,7 +287,6 @@ const { portfolios } = Astro.props;
                             </button>
                         </div>-->
                     </div>
-                </div>
             </aside>
         </div>
     </section>

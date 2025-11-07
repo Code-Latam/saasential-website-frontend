@@ -6,6 +6,8 @@ import Footer from "../components/Footer.astro";
 import {Icon} from 'astro-icon/components'
 import ContactSection from "../components/ContactSection.astro";
 const { service } = Astro.props;
+import { Image } from 'astro:assets';
+
 ---
 
 <Layout>
@@ -94,24 +96,12 @@ const { service } = Astro.props;
                                     data-aos-delay={i * 50}
                             >
                                 <div class="flex-shrink-0 w-3 h-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mt-0.5 group-hover:scale-110 transition-transform">
-                                    <!--<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-                                    </svg>-->
                                 </div>
                                 <span class="text-gray-700 font-medium leading-snug">{point.title}</span>
                             </div>
                     ))}
                 </div>
 
-                <!-- CTA Button -->
-                <!--<div class="pt-4" data-aos="fade-up" data-aos-delay="300">
-                    <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl">
-                        Get Started
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                        </svg>
-                    </a>
-                </div>-->
             </div>
 
             <!-- Right Image -->
@@ -122,9 +112,11 @@ const { service } = Astro.props;
 
                     <!-- Image container -->
                     <div class="relative overflow-hidden rounded-3xl shadow-2xl border border-gray-200 transform group-hover:scale-[1.02] transition-transform duration-500">
-                        <img
+                        <Image
                                 src={service.image}
                                 alt={service.title}
+                                height={400}
+                                width={600}
                                 class="w-full h-full object-cover"
                         />
                         <!-- Overlay gradient -->

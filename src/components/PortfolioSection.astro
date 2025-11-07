@@ -1,12 +1,7 @@
 ---
 import PortfolioCard from "./PortfolioCard.astro";
 import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
-import jobposting from "../assets/portfolios/jobposting_banner_1.png"
-import lucii from "../assets/portfolios/lucii_banner.png"
-import weatherapp from "../assets/portfolios/weather_banner_1.png"
-import wonomin from "../assets/portfolios/wonomin_banner_1.png"
-import tictactoe from "../assets/portfolios/tictactoe_banner_1.png"
-import siptouch from "../assets/portfolios/siptouch_banner_1.png"
+import {portfolios} from "../data/portfolios";
 ---
 
 <section class="py-20 bg-white overflow-hidden" id="portfolio">
@@ -14,26 +9,27 @@ import siptouch from "../assets/portfolios/siptouch_banner_1.png"
         <!-- Header -->
         <div class="flex justify-between items-center mb-12 portfolio-header">
             <div>
-                <div class="flex items-center gap-2 mb-3 fade-in-up" style="animation-delay: 0.1s;">
+                <div class="flex items-center gap-2 mb-3" data-aos="fade-up" data-aos-delay="100">
                     <span class="text-blue-400 text-lg">✱</span>
                     <span class="text-blue-400 font-semibold tracking-wide uppercase text-sm">Visual Excellence</span>
                     <span class="text-blue-400 text-lg">✱</span>
                 </div>
-                <h2 class="text-5xl font-bold text-gray-900 fade-in-up" style="animation-delay: 0.2s;">
+                <h2 class="text-5xl font-bold text-gray-900" data-aos="fade-up" data-aos-delay="200">
                     Our Creative Showcase
                 </h2>
             </div>
             <a
-                    href="#all-portfolio"
-                    class="hidden md:block px-8 py-3 bg-blue-400 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 fade-in-up"
-                    style="animation-delay: 0.3s;"
+                    href="/our-work"
+                    class="hidden md:block px-8 py-3 bg-blue-400 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
+                    data-aos="fade-left"
+                    data-aos-delay="300"
             >
                 View All Portfolio
             </a>
         </div>
 
         <!-- Swiper Slider -->
-        <div class="fade-in-up" style="animation-delay: 0.4s;">
+        <div data-aos="fade-up" data-aos-delay="400">
             <Swiper
                     class="portfolio-swiper pb-20"
                     options={{
@@ -49,7 +45,7 @@ import siptouch from "../assets/portfolios/siptouch_banner_1.png"
                                 spaceBetween: 25,
                             },
                             1024: {
-                                slidesPerView: 3,
+                                slidesPerView: 2.5,
                                 spaceBetween: 30,
                             },
                         },
@@ -61,69 +57,28 @@ import siptouch from "../assets/portfolios/siptouch_banner_1.png"
                             },
                         },
                         loop: true,
-                        speed: 800,
                         autoplay: {
                             delay: 4000,
                             disableOnInteraction: false,
                         },
+                        speed: 800,
                         effect: 'slide',
                     }}
             >
                 <SwiperWrapper>
-                    <SwiperSlide>
-                        <PortfolioCard
-                                title="Bridging Traditional Finance with Cryptocurrency Trading"
-                                category="Cryptocurrency"
-                                image={jobposting}
-                                link="#"
-                        />
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <PortfolioCard
-                                title="Elevating Boardroom Media's Digital Presence"
-                                category="Entertainment & Media"
-                                image={lucii}
-                                link="#"
-                        />
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <PortfolioCard
-                                title="Unified Platform for Crypto Transactions"
-                                category="Cryptocurrency"
-                                image={weatherapp}
-                                link="#"
-                        />
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <PortfolioCard
-                                title="Modern Banking Experience Reimagined"
-                                category="FinTech"
-                                image={wonomin}
-                                link="#"
-                        />
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <PortfolioCard
-                                title="AI-Powered Customer Engagement Platform"
-                                category="Artificial Intelligence"
-                                image={tictactoe}
-                                link="#"
-                        />
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <PortfolioCard
-                                title="Secure Payment Gateway Solution"
-                                category="FinTech"
-                                image={siptouch}
-                                link="#"
-                        />
-                    </SwiperSlide>
-
+                    {
+                        portfolios.map((portfolio, i) => (
+                                <SwiperSlide>
+                                    <PortfolioCard
+                                            title={portfolio.title}
+                                            description={portfolio.shortDesc}
+                                            category={portfolio.category}
+                                            image={portfolio.image}
+                                            link={"/our-work/" + portfolio.slug}
+                                    />
+                                </SwiperSlide>
+                        ))
+                    }
                 </SwiperWrapper>
             </Swiper>
 
@@ -134,9 +89,9 @@ import siptouch from "../assets/portfolios/siptouch_banner_1.png"
         </div>
 
         <!-- Mobile View All Button -->
-        <div class="md:hidden text-center mt-8 fade-in-up" style="animation-delay: 0.5s;">
+        <div class="md:hidden text-center mt-8" data-aos="fade-up" data-aos-delay="500">
             <a
-                    href="#all-portfolio"
+                    href="/our-work"
                     class="inline-block px-8 py-3 bg-blue-400 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
                 View All Portfolio
@@ -146,21 +101,37 @@ import siptouch from "../assets/portfolios/siptouch_banner_1.png"
 </section>
 
 <style>
-    /* Fade in up animation */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    /* AOS Animations */
+    [data-aos] {
+        opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .fade-in-up {
-        animation: fadeInUp 0.8s ease-out forwards;
-        opacity: 0;
+    [data-aos="fade-up"] {
+        transform: translateY(40px);
+    }
+
+    [data-aos="fade-down"] {
+        transform: translateY(-40px);
+    }
+
+    [data-aos="fade-left"] {
+        transform: translateX(40px);
+    }
+
+    [data-aos="fade-right"] {
+        transform: translateX(-40px);
+    }
+
+    [data-aos].aos-animate {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
     }
 
     /* Custom Swiper Pagination Styling */
@@ -223,29 +194,27 @@ import siptouch from "../assets/portfolios/siptouch_banner_1.png"
     :global(.portfolio-swiper .swiper-slide-active > *) {
         animation: slideIn 0.6s ease-out;
     }
+
 </style>
 
 <script>
-    // Add intersection observer for scroll animations
-    if (typeof window !== 'undefined') {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+    // Enhanced intersection observer with stagger effect
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
+                    const delay = entry.target.getAttribute('data-aos-delay') || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('aos-animate');
+                    }, parseInt(delay));
                 }
             });
-        }, observerOptions);
+        },
+        {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        }
+    );
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('.fade-in-up');
-            animatedElements.forEach(el => {
-                observer.observe(el);
-            });
-        });
-    }
+    document.querySelectorAll('[data-aos]').forEach((el) => observer.observe(el));
 </script>

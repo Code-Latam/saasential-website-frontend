@@ -8,8 +8,16 @@ import Layout from "../../layouts/Layout.astro";
 import '../../styles/global.css';
 import { services } from "../../data/services";
 import ServiceCard from "../../components/ServiceCard.astro";
+import SEO from "../../components/SEO.astro";
 
 ---
+<SEO
+    title="Services & Solutions | Saasential"
+    description="Explore Saasential's comprehensive services and solutions designed to empower your business with innovative technology."
+    keywords="SaaS development, FinTech solutions, software consulting, cloud architecture, API automation"
+    image="/logo/saasential_logo.svg"
+    url="https://saasential.com/services"
+/>
 <Layout>
     <Navbar/>
     <section class="bg-white min-h-screen flex flex-col">

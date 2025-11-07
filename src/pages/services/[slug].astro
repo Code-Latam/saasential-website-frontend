@@ -1,6 +1,7 @@
 ---
 import { services } from "../../data/services";
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import SEO from "../../components/SEO.astro";
 
 export async function getStaticPaths() {
     return services.map((service) => ({
@@ -11,5 +12,11 @@ export async function getStaticPaths() {
 
 const { service } = Astro.props;
 ---
-
+<SEO
+        title={`${service.title} | Saasential`}
+        description={service.shortDesc}
+        keywords={service.keywords}
+        image={service.image}
+        url={`https://saasential.com/services/${service.slug}`}
+ />
 <ServiceLayout {service} />

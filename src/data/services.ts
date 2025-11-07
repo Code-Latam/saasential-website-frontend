@@ -5,8 +5,9 @@ export const services = [
         title: "SaaS Architecture & Development",
         description:
             "We design and build scalable SaaS platforms from the ground up — architected for performance, security, and growth. Saasential accelerates your go-to-market by combining modern frameworks with solid cloud infrastructure and CI/CD automation.",
-        image: "/assets/icons/cloud-computing.png",
+        image: "/images/saas-service.jpg",
         icon: "/icons/cloud-computing.png",
+        keywords: ["SaaS", "Cloud", "Scalability", "Performance", "APIs"],
         shortDesc:
             "End-to-end SaaS platform development engineered for scalability, performance, and cloud-native growth.",
         points: [
@@ -45,7 +46,8 @@ export const services = [
         title: "FinTech & Payments Integration",
         description:
             "We specialize in building and integrating FinTech systems — from card and ACH processing to wallets, ledgers, and payout automation. Saasential delivers compliant, API-driven financial workflows that support regional and global expansion.",
-        image: "/images/services/fintech-payments.svg",
+        image: "/images/payment-integration-service.jpg",
+        keywords: ["FinTech", "Payments", "APIs", "Compliance", "Scalability"],
         icon: "/icons/fintech.png",
         shortDesc:
             "Compliant, scalable, and API-driven payment solutions for FinTechs and financial platforms.",
@@ -83,7 +85,8 @@ export const services = [
         title: "API Design & Workflow Visualization (API Astrolab)",
         description:
             "Through our proprietary platform API Astrolab, we help teams visualize, test, and document complex API workflows. It bridges the gap between sales, solution engineers, and developers by transforming technical APIs into clear, visual flows.",
-        image: "/images/services/api-astrolab.svg",
+        image: "/images/api-visualization-service.webp",
+        keywords: ["API", "Visualization", "Documentation", "Collaboration", "Workflows"],
         icon: "/icons/endpoint-protection.png",
         shortDesc:
             "Visualize and manage complex API workflows with interactive documentation and team collaboration.",
@@ -122,7 +125,8 @@ tools: [
         title: "Technical Documentation & Developer Portals",
         description:
             "We create developer portals that centralize your APIs, SDKs, and onboarding materials. Clear, interactive documentation accelerates developer adoption and improves internal team efficiency.",
-        image: "/images/services/developer-portal.svg",
+        image: "/images/technical-documentation-service.png",
+        keywords: ["Documentation", "Developer Portal", "APIs", "SDKs", "Onboarding"],
         icon: "/icons/document.png",
         shortDesc:
             "Interactive developer portals for API documentation, SDK onboarding, and version control.",
@@ -159,7 +163,8 @@ tools: [
         title: "AI & Automation Consulting",
         description:
             "Saasential integrates AI agents and data automation into business workflows — from intelligent API assistants to vector-based data retrieval for support, compliance, and analytics.",
-        image: "/images/services/ai-automation.svg",
+        image: "/images/ai-automation-service.png",
+        keywords: ["AI", "Automation", "Agents", "Data Retrieval", "Workflows"],
         icon: "/icons/automation.png",
         shortDesc:
             "Integrate intelligent AI agents and automation pipelines into your SaaS or FinTech ecosystem.",
@@ -197,7 +202,8 @@ tools: [
         title: "Strategic IT Consulting & Retainer Services",
         description:
             "We partner long-term with clients to provide ongoing architectural guidance, infrastructure management, and technology evolution. Ideal for FinTech companies scaling across regions or modernizing legacy systems.",
-        image: "/images/services/it-consulting.svg",
+        image: "/images/it-consulting-service.jpeg",
+        keywords: ["Consulting", "IT Strategy", "Infrastructure", "Modernization", "Partnership"],
         icon: "/icons/consultation.png",
         shortDesc:
             "Long-term technical partnership for architecture, infrastructure, and modernization strategy.",

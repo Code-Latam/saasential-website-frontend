@@ -17,18 +17,18 @@ import { heroContent } from '../content/content.ts';
         <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
 
         <!-- Animated particles -->
-        <div class="absolute inset-0">
+       <!-- <div class="absolute inset-0">
             <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob"></div>
             <div class="absolute top-40 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
             <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-blob animation-delay-4000"></div>
-        </div>
+        </div>-->
     </div>
 
     <!-- Content -->
     <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-10 py-24 md:py-40">
         <div class="text-left space-y-6 md:space-y-8 lg:space-y-10">
             <!-- Badge -->
-            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-5 py-1 rounded-full border border-blue-400/40 mb-4 animate-fade-in-down shadow-lg hover:shadow-blue-500/30 hover:border-blue-400/70 transition-all duration-300">
+            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-5 py-1 rounded-full border border-blue-400/40 mb-4 shadow-lg hover:shadow-blue-500/30 hover:border-blue-400/70 transition-all duration-300" data-aos="fade-down">
                 {heroContent.badge.pulse && (
                         <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -41,7 +41,7 @@ import { heroContent } from '../content/content.ts';
             </div>
 
             <!-- Heading -->
-            <h1 class="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight animate-fade-in-up">
+            <h1 class="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight" data-aos="fade-up" data-aos-delay="100">
                 {heroContent.heading.main}
                 <span class="block mt-2 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent animate-gradient">
                     {heroContent.heading.highlighted}
@@ -49,15 +49,16 @@ import { heroContent } from '../content/content.ts';
             </h1>
 
             <!-- Subtitle -->
-            <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl animate-fade-in-up animation-delay-200 leading-relaxed">
+            <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed" data-aos="fade-up" data-aos-delay="200">
                 {heroContent.subtitle}
             </p>
 
             <!-- CTA -->
-            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-8 animate-fade-in-up animation-delay-400">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-8" data-aos="fade-up" data-aos-delay="300">
                 <a
-                        href={heroContent.cta.link}
-                        aria-label={heroContent.cta.ariaLabel}
+                        href="https://calendly.com/steven-apiastrolab/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="group px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-xl hover:from-blue-600 hover:to-blue-800 transition-all duration-300 font-semibold text-base md:text-lg shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/40 transform hover:scale-105 hover:-translate-y-1 flex items-center space-x-3"
                 >
                     <span>{heroContent.cta.text}</span>
@@ -80,7 +81,7 @@ import { heroContent } from '../content/content.ts';
     </div>
 
     <!-- Scroll indicator -->
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce" data-aos="fade-up" data-aos-delay="400">
         <a
                 href={heroContent.scrollIndicator.link}
                 aria-label={heroContent.scrollIndicator.ariaLabel}
@@ -145,44 +146,61 @@ import { heroContent } from '../content/content.ts';
         animation: gradient 5s ease infinite;
     }
 
-    /* Fade animations */
-    @keyframes fadeInDown {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .animate-fade-in-down {
-        animation: fadeInDown 0.8s ease-out forwards;
-    }
-
-    .animate-fade-in-up {
-        animation: fadeInUp 0.8s ease-out forwards;
-    }
-
-    .animation-delay-200 {
-        animation-delay: 0.2s;
+    /* AOS Animations */
+    [data-aos] {
         opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .animation-delay-400 {
-        animation-delay: 0.4s;
-        opacity: 0;
+    [data-aos="fade-up"] {
+        transform: translateY(40px);
     }
+
+    [data-aos="fade-down"] {
+        transform: translateY(-40px);
+    }
+
+    [data-aos="fade-left"] {
+        transform: translateX(40px);
+    }
+
+    [data-aos="fade-right"] {
+        transform: translateX(-40px);
+    }
+
+    [data-aos].aos-animate {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+
+
 </style>
+
+<script>
+    // Enhanced intersection observer with stagger effect
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.getAttribute('data-aos-delay') || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('aos-animate');
+                    }, parseInt(delay));
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        }
+    );
+
+    document.querySelectorAll('[data-aos]').forEach((el) => observer.observe(el));
+</script>
+

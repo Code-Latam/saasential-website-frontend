@@ -1,16 +1,6 @@
 ---
 import {Icon} from 'astro-icon/components'
-
-const contactInfo = {
-    phone: "+1 (307) 555-0199",
-    email: "info@saasential.com",
-    address: "Headquartered in Wyoming, USA",
-    socials: [
-        {name: "LinkedIn", icon: "fa7-brands:linkedin", link: "#"},
-        {name: "Twitter", icon: "fa7-brands:x-twitter", link: "#"},
-        {name: "Instagram", icon: "fa7-brands:instagram", link: "#"},
-    ],
-};
+import {contactContent} from "../content/content.ts";
 ---
 
 <section id="contact" class="bg-white relative">
@@ -18,59 +8,58 @@ const contactInfo = {
         <div class="container-full">
             <div class="relative">
                 <!-- Left Info Panel - Full Width Background -->
-                <div class="contact-content bg-gray-900 text-white p-10 md:p-16 shadow-lg min-h-[700px] ">
+                <div class="contact-content bg-gray-900 text-white p-10 md:p-16 shadow-lg min-h-[700px]">
                     <div class="max-w-2xl md:w-[50%]">
                         <!-- Section Title -->
-                        <div class="section-title white mb-8">
+                        <div class="section-title white mb-8" data-aos="fade-up">
                             <span class="flex items-center gap-2 text-blue-400 tracking-widest font-semibold mb-3 text-sm">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-                                     class="fill-current">
+                                     class="fill-current animate-spin-slow">
                                     <path d="M6.6304 0.338424C6.67018 -0.112811 7.32982 -0.112807 7.3696 0.338428L7.72654 4.38625C7.75291 4.68505 8.10454 4.83069 8.33443 4.63804L11.4491 2.02821C11.7963 1.73728 12.2627 2.20368 11.9718 2.55089L9.36197 5.66556C9.1693 5.89546 9.31496 6.24709 9.61374 6.27346L13.6615 6.6304C14.1128 6.67018 14.1128 7.32982 13.6615 7.3696L9.61374 7.72654C9.31496 7.75291 9.1693 8.10454 9.36197 8.33443L11.9718 11.4491C12.2627 11.7963 11.7963 12.2627 11.4491 11.9718L8.33443 9.36197C8.10454 9.1693 7.75291 9.31496 7.72654 9.61374L7.3696 13.6615C7.32982 14.1128 6.67018 14.1128 6.6304 13.6615L6.27346 9.61374C6.24709 9.31496 5.89546 9.1693 5.66556 9.36197L2.55089 11.9718C2.20368 12.2627 1.73729 11.7963 2.02822 11.4491L4.63804 8.33443C4.83069 8.10454 4.68504 7.75291 4.38625 7.72654L0.338424 7.3696C-0.112811 7.32982 -0.112807 6.67018 0.338428 6.6304L4.38625 6.27346C4.68505 6.24709 4.83069 5.89546 4.63804 5.66556L2.02821 2.55089C1.73728 2.20368 2.20368 1.73729 2.55089 2.02822L5.66556 4.63804C5.89546 4.83069 6.24709 4.68504 6.27346 4.38625L6.6304 0.338424Z"></path>
                                 </svg>
-                                Drop Us a Line
+                                {contactContent.badge.text}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-                                     class="fill-current">
+                                     class="fill-current animate-spin-slow">
                                     <path d="M6.6304 0.338424C6.67018 -0.112811 7.32982 -0.112807 7.3696 0.338428L7.72654 4.38625C7.75291 4.68505 8.10454 4.83069 8.33443 4.63804L11.4491 2.02821C11.7963 1.73728 12.2627 2.20368 11.9718 2.55089L9.36197 5.66556C9.1693 5.89546 9.31496 6.24709 9.61374 6.27346L13.6615 6.6304C14.1128 6.67018 14.1128 7.32982 13.6615 7.3696L9.61374 7.72654C9.31496 7.75291 9.1693 8.10454 9.36197 8.33443L11.9718 11.4491C12.2627 11.7963 11.7963 12.2627 11.4491 11.9718L8.33443 9.36197C8.10454 9.1693 7.75291 9.31496 7.72654 9.61374L7.3696 13.6615C7.32982 14.1128 6.67018 14.1128 6.6304 13.6615L6.27346 9.61374C6.24709 9.31496 5.89546 9.1693 5.66556 9.36197L2.55089 11.9718C2.20368 12.2627 1.73729 11.7963 2.02822 11.4491L4.63804 8.33443C4.83069 8.10454 4.68504 7.75291 4.38625 7.72654L0.338424 7.3696C-0.112811 7.32982 -0.112807 6.67018 0.338428 6.6304L4.38625 6.27346C4.68505 6.24709 4.83069 5.89546 4.63804 5.66556L2.02821 2.55089C1.73728 2.20368 2.20368 1.73729 2.55089 2.02822L5.66556 4.63804C5.89546 4.83069 6.24709 4.68504 6.27346 4.38625L6.6304 0.338424Z"></path>
                                 </svg>
                             </span>
-                            <h2 class="text-4xl md:text-5xl font-bold mb-4">Connect with Saasential</h2>
+                            <h2 class="text-4xl md:text-5xl font-bold mb-4">{contactContent.heading.main}</h2>
                             <p class="text-gray-300 text-lg">
-                                Ready to take the first step towards unlocking opportunities, realizing goals, and
-                                embracing innovation? We're here and eager to connect.
+                                {contactContent.heading.subtitle}
                             </p>
                         </div>
 
                         <!-- Contact Area -->
                         <div class="contact-area space-y-14 mb-16 mt-16">
                             <!-- Phone -->
-                            <div class="hotline-area flex items-center gap-4">
-                                <div class="icon text-blue-400  text-3xl">
+                            <div class="hotline-area flex items-center gap-4 group" data-aos="fade-right" data-aos-delay="100">
+                                <div class="icon text-blue-400 text-3xl transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12">
                                     <Icon name="fa7-solid:volume-control-phone"/>
                                 </div>
                                 <div class="line h-12 border-l border-gray-700"></div>
                                 <div>
                                     <span class="text-sm text-gray-400 block mb-1">To More Inquiry</span>
                                     <h6>
-                                        <a href={`tel:${contactInfo.phone}`}
-                                           class="font-semibold text-lg text-white hover:text-blue-400  transition-colors">
-                                            {contactInfo.phone}
+                                        <a href={`tel:${contactContent.phone}`}
+                                           class="font-semibold text-lg text-white hover:text-blue-400 transition-colors">
+                                            {contactContent.phone}
                                         </a>
                                     </h6>
                                 </div>
                             </div>
 
                             <!-- Email -->
-                            <div class="hotline-area flex items-center gap-4">
-                                <div class="icon text-blue-400  text-3xl">
+                            <div class="hotline-area flex items-center gap-4 group" data-aos="fade-right" data-aos-delay="200">
+                                <div class="icon text-blue-400 text-3xl transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12">
                                     <Icon name="fa7-solid:envelope"/>
                                 </div>
                                 <div class="line h-12 border-l border-gray-700"></div>
                                 <div>
                                     <span class="text-sm text-gray-400 block mb-1">To Send Mail</span>
                                     <h6>
-                                        <a href={`mailto:${contactInfo.email}`}
-                                           class="font-semibold text-lg text-white hover:text-blue-400  transition-colors break-all">
-                                            {contactInfo.email}
+                                        <a href={`mailto:${contactContent.email}`}
+                                           class="font-semibold text-lg text-white hover:text-blue-400 transition-colors break-all">
+                                            {contactContent.email}
                                         </a>
                                     </h6>
                                 </div>
@@ -78,12 +67,14 @@ const contactInfo = {
                         </div>
 
                         <!-- Social Area -->
-                        <div class="social-area mt-10">
+                        <div class="social-area mt-10" data-aos="fade-up" data-aos-delay="300">
                             <h6 class="text-base font-medium text-gray-300 mb-5">Social Just You Connected Us!</h6>
                             <div class="flex gap-4">
-                                {contactInfo.socials.map((s) => (
+                                {contactContent.socials.map((s, index) => (
                                         <a href={s.link}
-                                           class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-700 hover:border-blue-400 hover:text-blue-400 transition-colors duration-300">
+                                           data-aos="fade-up"
+                                           data-aos-delay={400 + index * 50}
+                                           class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-700 hover:border-blue-400 hover:text-blue-400 transition-all duration-300 hover:scale-110 hover:-translate-y-1">
                                             <Icon name={s.icon} size={20}/>
                                         </a>
                                 ))}
@@ -94,112 +85,117 @@ const contactInfo = {
 
 
                 <!-- Right Contact Form - Overlapping from top right -->
-                <div class="contact-form-wrap absolute bottom-20 right-10  md:w-[40%] lg:w-[40%] bg-white rounded-2xl shadow-2xl z-10">
+                <div class="contact-form-wrap absolute bottom-20 right-10 md:w-[40%] lg:w-[40%] bg-white rounded-2xl shadow-2xl z-10" data-aos="fade-left" data-aos-delay="200">
                     <div class="contact-form-area p-8 md:p-10">
                         <h3 class="text-2xl font-bold text-gray-900 mb-6">
                             Your Success Starts Here!
                         </h3>
                         <hr class="mb-6 border-gray-200"/>
-                        <form class="space-y-5">
+                        <form id="contactForm" action="https://formspree.io/f/xdkpqqwv" method="POST" class="space-y-5">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <!-- Full Name -->
-                                <div class="form-inner">
+                                <div class="form-inner" data-aos="fade-up" data-aos-delay="300">
                                     <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
                                     <input
                                             type="text"
                                             name="name"
                                             placeholder="John Doe"
-                                            class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all"
+                                            class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all hover:border-blue-300"
                                             required
                                     />
                                 </div>
 
                                 <!-- Company -->
-                                <div class="form-inner">
+                                <div class="form-inner" data-aos="fade-up" data-aos-delay="350">
                                     <label class="block text-sm font-medium text-gray-700 mb-2">Company /
                                         Organization</label>
                                     <input
                                             type="text"
                                             name="company"
                                             placeholder="ABC Technologies"
-                                            class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all"
+                                            class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all hover:border-blue-300"
                                     />
                                 </div>
 
                                 <!-- Phone -->
-                                <div class="form-inner">
+                                <div class="form-inner" data-aos="fade-up" data-aos-delay="400">
                                     <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
                                     <input
                                             type="text"
                                             name="phone"
                                             placeholder="+11234567890"
-                                            class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all"
+                                            class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all hover:border-blue-300"
                                     />
                                 </div>
 
                                 <!-- Email -->
-                                <div class="form-inner">
+                                <div class="form-inner" data-aos="fade-up" data-aos-delay="450">
                                     <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
                                     <input
                                             type="email"
                                             name="email"
                                             placeholder="johndoe@abctechnologies.com"
-                                            class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all"
+                                            class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all hover:border-blue-300"
                                             required
                                     />
                                 </div>
                             </div>
 
                             <!-- Country -->
-                            <div class="form-inner">
+                            <div class="form-inner" data-aos="fade-up" data-aos-delay="500">
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Country *</label>
                                 <input
                                         type="text"
                                         name="country"
                                         placeholder="United States"
-                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all"
+                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all hover:border-blue-300"
                                         required
                                 />
                             </div>
 
                             <!-- Subject -->
-                            <div class="form-inner">
+                            <div class="form-inner" data-aos="fade-up" data-aos-delay="550">
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
                                 <input
                                         type="text"
                                         name="subject"
                                         placeholder="Schedule a Meeting"
-                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all"
+                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all hover:border-blue-300"
                                         required
                                 />
                             </div>
 
                             <!-- Message -->
-                            <div class="form-inner">
+                            <div class="form-inner" data-aos="fade-up" data-aos-delay="600">
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
                                 <textarea
                                         name="message"
                                         placeholder="Hi! I'd like to schedule a meeting to discuss a project."
                                         rows="4"
-                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none resize-none transition-all"
+                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none resize-none transition-all hover:border-blue-300"
                                         required
                                 ></textarea>
                             </div>
 
                             <!-- reCAPTCHA -->
-                            <div class="form-inner">
+                            <div class="form-inner" data-aos="fade-up" data-aos-delay="650">
                                 <div class="g-recaptcha" data-sitekey="6LezrywqAAAAAPZRpri6cp38wttLTa4Jwg1Gzlms"></div>
                             </div>
 
                             <!-- Submit Button -->
-                            <div class="form-inner">
+                            <div class="form-inner" data-aos="fade-up" data-aos-delay="700">
                                 <button
                                         type="submit"
-                                        class="w-full bg-blue-400 text-white font-semibold py-4 rounded-xl shadow-md hover:bg-blue-400 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                                        class="w-full bg-blue-400 text-white font-semibold py-4 rounded-xl shadow-md hover:bg-blue-500 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105 active:scale-95"
                                 >
                                     <span>Submit Now</span>
                                 </button>
                             </div>
+                            <!-- ✅ Success / Error Messages -->
+                            <p id="formSuccess" class="hidden text-green-600 text-center mt-3 font-medium">
+                                Thank You! we will get back to you soon.
+                            </p>
+                            <p id="formError" class="hidden text-red-600 text-center mt-3 font-medium"> Failed to send message. Please try again.</p>
                         </form>
                     </div>
                 </div>
@@ -217,11 +213,59 @@ const contactInfo = {
     #contact {
         padding-top: 100px;
     }
+
     .container-full {
         width: 100%;
         padding-left: 0;
         padding-right: 0;
         margin-top: 30px;
+    }
+
+    /* Slow Spin Animation for decorative stars */
+    @keyframes spinSlow {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .animate-spin-slow {
+        animation: spinSlow 20s linear infinite;
+    }
+
+    /* AOS Animations */
+    [data-aos] {
+        opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-aos="fade-up"] {
+        transform: translateY(40px);
+    }
+
+    [data-aos="fade-down"] {
+        transform: translateY(-40px);
+    }
+
+    [data-aos="fade-left"] {
+        transform: translateX(40px);
+    }
+
+    [data-aos="fade-right"] {
+        transform: translateX(-40px);
+    }
+
+    [data-aos].aos-animate {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
     }
 
     @media (max-width: 767px) {
@@ -233,4 +277,62 @@ const contactInfo = {
             margin-top: 2rem;
         }
     }
+
 </style>
+
+<script>
+    // Enhanced intersection observer with stagger effect
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.getAttribute('data-aos-delay') || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('aos-animate');
+                    }, parseInt(delay));
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        }
+    );
+
+    document.querySelectorAll('[data-aos]').forEach((el) => observer.observe(el));
+
+    const form = document.getElementById("contactForm");
+    const successMsg = document.getElementById("formSuccess");
+    const errorMsg = document.getElementById("formError");
+
+    form?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: { Accept: "application/json" },
+            });
+
+            if (response.ok) {
+                successMsg?.classList.remove("hidden");
+                errorMsg?.classList.add("hidden");
+                setTimeout(() => {
+                    successMsg?.classList.add("hidden");
+                }, 5000);
+                form.reset();
+            } else {
+                throw new Error();
+            }
+        } catch {
+            successMsg?.classList.add("hidden");
+            errorMsg?.classList.remove("hidden");
+            setTimeout(() => {
+                errorMsg?.classList.add("hidden");
+            }, 5000);
+        }
+    });
+</script>
+
