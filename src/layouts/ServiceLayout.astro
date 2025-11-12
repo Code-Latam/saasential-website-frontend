@@ -74,10 +74,6 @@ import { Image } from 'astro:assets';
         <div class="flex flex-col lg:flex-row items-start gap-16">
             <!-- Left Content -->
             <div class="lg:w-1/2 space-y-8" data-aos="fade-right">
-                <!--<div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
-                    <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-                    Our Expertise
-                </div>-->
 
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                     {service.title}
@@ -85,11 +81,24 @@ import { Image } from 'astro:assets';
 
                 <p class="text-gray-600 text-lg leading-relaxed">
                     {service.description}
+                    {
+                        service.highlight && (
+                        <a href={service.highlight.url} target="_blank" class="text-blue-600 font-semibold hover:underline mt-2 inline-block cursor-pointer">
+                            {service.highlight.text}
+                        </a>
+                        )
+                    }
+                    {  service.continueDescription &&(
+                        <span>
+                            {service.continueDescription}
+                        </span>
+                        )
+                    }
                 </p>
 
                 <!-- Multi-column Points List -->
                 <div class="grid sm:grid-cols-2 gap-4 pt-4">
-                    {service.points.map((point, i) => (
+                    {service.points.map((point:any, i:any) => (
                             <div
                                     class="flex items-center gap-3 p-4 bg-white rounded-xl transition-all duration-300 group"
                                     data-aos="fade-up"
@@ -137,10 +146,6 @@ import { Image } from 'astro:assets';
                 <!-- Sticky Heading -->
                 <div class="lg:w-2/5">
                     <div class="lg:sticky lg:top-32 space-y-6" data-aos="fade-right">
-                        <!--<div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-                            How We Work
-                        </div>-->
 
                         <h3 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                             Our Process
@@ -166,7 +171,7 @@ import { Image } from 'astro:assets';
 
                 <!-- Scrollable Process Steps -->
                 <div class="lg:w-3/5 space-y-6">
-                    {service.points.map((point, i) => (
+                    {service.points.map((point:any, i:any) => (
                             <div
                                     class="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-200 hover:border-blue-300 transition-all duration-500 overflow-hidden"
                                     data-aos="fade-up"
@@ -207,10 +212,6 @@ import { Image } from 'astro:assets';
     <div class="bg-white py-24">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-start mb-16" data-aos="fade-up">
-                <!--<div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
-                    <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-                    Technology Stack
-                </div>-->
 
                 <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                     Our Tools & Technologies
@@ -222,7 +223,7 @@ import { Image } from 'astro:assets';
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8" data-aos="fade-up" data-aos-delay="200">
-                {service.tools.map((tool, i) => (
+                {service.tools.map((tool:any, i:any) => (
                         <div
                                 class="group flex flex-col items-center justify-center p-6 bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 cursor-pointer"
                                 data-aos="zoom-in"
@@ -318,7 +319,7 @@ import { Image } from 'astro:assets';
                     const delay = entry.target.getAttribute('data-aos-delay') || 0;
                     setTimeout(() => {
                         entry.target.classList.add('aos-animate');
-                    }, parseInt(delay));
+                    }, parseInt(delay.toString()));
                 }
             });
         },

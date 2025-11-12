@@ -4,6 +4,75 @@ import { Image } from 'astro:assets';
 
 ---
 
+<!--<section class="py-20 bg-white" id="approach">
+    <div class="max-w-7xl mx-auto px-6">
+        &lt;!&ndash; Heading &ndash;&gt;
+        <div class="flex justify-between items-center mb-12 portfolio-header">
+            <div>
+                <div class="flex items-center gap-2 mb-3" data-aos="fade-up" data-aos-delay="100">
+                    <span class="text-blue-400 text-lg">✱</span>
+                    <span class="text-blue-400 font-semibold tracking-wide uppercase text-sm">{approachContent.badge.text}</span>
+                    <span class="text-blue-400 text-lg">✱</span>
+                </div>
+                <h2 class="text-5xl font-bold text-gray-900" data-aos="fade-up" data-aos-delay="200">
+                    {approachContent.heading.main}
+                </h2>
+            </div>
+        </div>
+
+        &lt;!&ndash; Step Images Timeline &ndash;&gt;
+        <div class="relative flex justify-between items-start mb-8" data-aos="fade-up" data-aos-delay="300">
+            &lt;!&ndash; Timeline Line &ndash;&gt;
+            <div class="absolute top-[196px] left-0 w-full h-[1px] bg-[#eee] z-0"></div>
+
+            {approachContent.steps.map((step, index) => (
+                    <div class="relative z-10 flex flex-col items-center w-1/4" data-aos="fade-down" data-aos-delay={400 + index * 100}>
+                        <div class="w-44 h-44 mb-4 flex items-center justify-center">
+                            <Image src={step.img} height={40} width={40} alt={step.title} class="w-full h-full object-contain" />
+                        </div>
+                        <div class="relative flex flex-col items-center">
+                            &lt;!&ndash; Vertical line before dot &ndash;&gt;
+                            <div class="w-2.5 h-2.5 bg-black rounded-full"></div>
+                            <div class="h-10 w-[1px] bg-[#eee] mb-0"></div>
+                            &lt;!&ndash; Dot &ndash;&gt;
+                        </div>
+                    </div>
+            ))}
+        </div>
+
+        &lt;!&ndash; Cards Grid &ndash;&gt;
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {approachContent.steps.map((step, index) => (
+                    <div
+                            class="card-hover relative w-full h-[420px] bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                            data-card={index}
+                            data-aos="fade-up"
+                            data-aos-delay={800 + index * 100}
+                    >
+                        <div class="card-content p-6">
+                            <p class="text-blue-500 font-semibold text-xs mb-2 tracking-wide">{step.step}</p>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">{step.title}</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">{step.description}</p>
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                {step.points.map((point) => {
+                                    const [label, ...rest] = point.split(':');
+                                    return (
+                                            <li class="flex">
+                                                <span class="mr-2">•</span>
+                                                <span>
+                                            <strong class="font-semibold text-gray-900">{label}:</strong>
+                                                    {rest.length > 0 && <span class="text-gray-600">{rest.join(':')}</span>}
+                                        </span>
+                                            </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                    </div>
+            ))}
+        </div>
+    </div>
+</section>-->
 <section class="py-20 bg-white" id="approach">
     <div class="max-w-7xl mx-auto px-6">
         <!-- Heading -->
@@ -20,28 +89,116 @@ import { Image } from 'astro:assets';
             </div>
         </div>
 
-        <!-- Step Images Timeline -->
-        <div class="relative flex justify-between items-start mb-8" data-aos="fade-up" data-aos-delay="300">
+        <!-- Desktop: Step Images Timeline -->
+        <div class="hidden lg:block relative mb-8" data-aos="fade-up" data-aos-delay="300">
             <!-- Timeline Line -->
             <div class="absolute top-[196px] left-0 w-full h-[1px] bg-[#eee] z-0"></div>
 
-            {approachContent.steps.map((step, index) => (
-                    <div class="relative z-10 flex flex-col items-center w-1/4" data-aos="fade-down" data-aos-delay={400 + index * 100}>
-                        <div class="w-44 h-44 mb-4 flex items-center justify-center">
-                            <Image src={step.img} height={40} width={40} alt={step.title} class="w-full h-full object-contain" />
+            <div class="flex justify-between items-start">
+                {approachContent.steps.map((step, index) => (
+                        <div class="relative z-10 flex flex-col items-center w-1/4" data-aos="fade-down" data-aos-delay={400 + index * 100}>
+                            <div class="w-44 h-44 mb-4 flex items-center justify-center">
+                                <Image src={step.img} height={40} width={40} alt={step.title} class="w-full h-full object-contain" />
+                            </div>
+                            <div class="relative flex flex-col items-center">
+                                <div class="w-2.5 h-2.5 bg-black rounded-full"></div>
+                                <div class="h-10 w-[1px] bg-[#eee] mb-0"></div>
+                            </div>
                         </div>
-                        <div class="relative flex flex-col items-center">
-                            <!-- Vertical line before dot -->
-                            <div class="w-2.5 h-2.5 bg-black rounded-full"></div>
-                            <div class="h-10 w-[1px] bg-[#eee] mb-0"></div>
-                            <!-- Dot -->
+                ))}
+            </div>
+        </div>
+
+        <!-- Mobile: Single Column Image + Card -->
+        <div class="md:hidden space-y-8 mb-8">
+            {approachContent.steps.map((step, index) => (
+                    <div data-aos="fade-up" data-aos-delay={300 + index * 100}>
+                        <!-- Step Image -->
+                        <div class="flex flex-col items-center mb-4">
+                            <div class="w-44 h-44 mb-4 flex items-center justify-center">
+                                <Image src={step.img} height={40} width={40} alt={step.title} class="w-full h-full object-contain" />
+                            </div>
+                            <div class="relative flex flex-col items-center">
+                                <div class="w-2.5 h-2.5 bg-black rounded-full"></div>
+                                <div class="h-10 w-[1px] bg-[#eee] mb-0"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step Card -->
+                        <div
+                                class="card-hover relative w-full h-[420px] bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                                data-card={index}
+                        >
+                            <div class="card-content p-6">
+                                <p class="text-blue-500 font-semibold text-xs mb-2 tracking-wide">{step.step}</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">{step.title}</h3>
+                                <p class="text-gray-600 text-sm mb-4 leading-relaxed">{step.description}</p>
+                                <ul class="text-gray-700 space-y-2 text-sm">
+                                    {step.points.map((point) => {
+                                        const [label, ...rest] = point.split(':');
+                                        return (
+                                                <li class="flex">
+                                                    <span class="mr-2">•</span>
+                                                    <span>
+                                                <strong class="font-semibold text-gray-900">{label}:</strong>
+                                                        {rest.length > 0 && <span class="text-gray-600">{rest.join(':')}</span>}
+                                            </span>
+                                                </li>
+                                        );
+                                    })}
+                                </ul>
+                            </div>
                         </div>
                     </div>
             ))}
         </div>
 
-        <!-- Cards Grid -->
-        <div class="grid grid-cols-4 gap-6">
+        <!-- Tablet: Two Columns Image + Card -->
+        <div class="hidden md:grid lg:hidden grid-cols-2 gap-8 mb-8">
+            {approachContent.steps.map((step, index) => (
+                    <div data-aos="fade-up" data-aos-delay={300 + index * 100}>
+                        <!-- Step Image -->
+                        <div class="flex flex-col items-center mb-4">
+                            <div class="w-44 h-44 mb-4 flex items-center justify-center">
+                                <Image src={step.img} height={40} width={40} alt={step.title} class="w-full h-full object-contain" />
+                            </div>
+                            <div class="relative flex flex-col items-center">
+                                <div class="w-2.5 h-2.5 bg-black rounded-full"></div>
+                                <div class="h-10 w-[1px] bg-[#eee] mb-0"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step Card -->
+                        <div
+                                class="card-hover relative w-full h-[420px] bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                                data-card={index}
+                        >
+                            <div class="card-content p-6">
+                                <p class="text-blue-500 font-semibold text-xs mb-2 tracking-wide">{step.step}</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">{step.title}</h3>
+                                <p class="text-gray-600 text-sm mb-4 leading-relaxed">{step.description}</p>
+                                <ul class="text-gray-700 space-y-2 text-sm">
+                                    {step.points.map((point) => {
+                                        const [label, ...rest] = point.split(':');
+                                        return (
+                                                <li class="flex">
+                                                    <span class="mr-2">•</span>
+                                                    <span>
+                                                <strong class="font-semibold text-gray-900">{label}:</strong>
+                                                        {rest.length > 0 && <span class="text-gray-600">{rest.join(':')}</span>}
+                                            </span>
+                                                </li>
+                                        );
+                                    })}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            ))}
+        </div>
+
+        <!-- Desktop: Cards Grid -->
+        <div class="hidden lg:grid grid-cols-4 gap-8">
             {approachContent.steps.map((step, index) => (
                     <div
                             class="card-hover relative w-full h-[420px] bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
@@ -73,7 +230,6 @@ import { Image } from 'astro:assets';
         </div>
     </div>
 </section>
-
 <style>
     /* AOS Animations */
     [data-aos] {
@@ -127,7 +283,7 @@ import { Image } from 'astro:assets';
                     const delay = entry.target.getAttribute('data-aos-delay') || 0;
                     setTimeout(() => {
                         entry.target.classList.add('aos-animate');
-                    }, parseInt(delay));
+                    }, parseInt(delay.toString()));
                 }
             });
         },

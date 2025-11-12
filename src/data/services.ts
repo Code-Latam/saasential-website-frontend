@@ -84,7 +84,12 @@ export const services = [
         slug: "api-design-workflow-visualization",
         title: "API Design & Workflow Visualization (API Astrolab)",
         description:
-            "Through our proprietary platform API Astrolab, we help teams visualize, test, and document complex API workflows. It bridges the gap between sales, solution engineers, and developers by transforming technical APIs into clear, visual flows.",
+            "Through our proprietary platform",
+        highlight:{
+            text:"API Astrolab,",
+            url:"https://www.apiastrolab.com/en/"
+        },
+        continueDescription:" we help teams visualize, test, and document complex API workflows. It bridges the gap between sales, solution engineers, and developers by transforming technical APIs into clear, visual flows.",
         image: "/images/api-visualization-service.webp",
         keywords: ["API", "Visualization", "Documentation", "Collaboration", "Workflows"],
         icon: "/icons/endpoint-protection.png",

@@ -3,13 +3,13 @@ import {Icon} from 'astro-icon/components'
 import {contactContent} from "../content/content.ts";
 ---
 
-<section id="contact" class="bg-white relative">
+<section id="contact" class="bg-white relative overflow-hidden">
     <div class="contact-section">
         <div class="container-full">
             <div class="relative">
                 <!-- Left Info Panel - Full Width Background -->
                 <div class="contact-content bg-gray-900 text-white p-10 md:p-16 shadow-lg min-h-[700px]">
-                    <div class="max-w-2xl md:w-[50%]">
+                    <div class="max-w-2xl lg:w-[50%]">
                         <!-- Section Title -->
                         <div class="section-title white mb-8" data-aos="fade-up">
                             <span class="flex items-center gap-2 text-blue-400 tracking-widest font-semibold mb-3 text-sm">
@@ -84,10 +84,10 @@ import {contactContent} from "../content/content.ts";
                 </div>
 
 
-                <!-- Right Contact Form - Overlapping from top right -->
-                <div class="contact-form-wrap absolute bottom-20 right-10 md:w-[40%] lg:w-[40%] bg-white rounded-2xl shadow-2xl z-10" data-aos="fade-left" data-aos-delay="200">
-                    <div class="contact-form-area p-8 md:p-10">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                <!-- Right Contact Form - Overlapping from top right on desktop, below on mobile -->
+                <div class="contact-form-wrap relative lg:absolute lg:bottom-20 lg:right-10 w-full lg:w-[40%] bg-white rounded-2xl shadow-2xl z-10 -mt-20 lg:mt-0 mx-auto max-w-2xl lg:max-w-none px-6 lg:px-0" data-aos="fade-left" data-aos-delay="200">
+                    <div class="contact-form-area p-8 md:p-10 ">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
                             Your Success Starts Here!
                         </h3>
                         <hr class="mb-6 border-gray-200"/>
@@ -205,10 +205,6 @@ import {contactContent} from "../content/content.ts";
     </div>
 </section>
 
-<!--
-<script is:inline src="https://www.google.com/recaptcha/api.js" async defer></script>
--->
-
 <style>
     #contact {
         padding-top: 100px;
@@ -289,7 +285,7 @@ import {contactContent} from "../content/content.ts";
                     const delay = entry.target.getAttribute('data-aos-delay') || 0;
                     setTimeout(() => {
                         entry.target.classList.add('aos-animate');
-                    }, parseInt(delay));
+                    }, parseInt(delay.toString()));
                 }
             });
         },
@@ -307,7 +303,7 @@ import {contactContent} from "../content/content.ts";
 
     form?.addEventListener("submit", async (e) => {
         e.preventDefault();
-        const formData = new FormData(form);
+        const formData = new FormData(form as HTMLFormElement);
         formData.append("access_key", "ed9cbf6b-5a36-48a1-a04c-b7cd5b9a223e");
 
         try {
@@ -323,7 +319,7 @@ import {contactContent} from "../content/content.ts";
                 setTimeout(() => {
                     successMsg?.classList.add("hidden");
                 }, 5000);
-                form.reset();
+                form.reset() ;
             } else {
                 throw new Error();
             }

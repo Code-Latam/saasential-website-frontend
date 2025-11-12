@@ -178,7 +178,7 @@ import SEO from "../../components/SEO.astro";
                     const delay = entry.target.getAttribute('data-aos-delay') || 0;
                     setTimeout(() => {
                         entry.target.classList.add('aos-animate');
-                    }, parseInt(delay));
+                    }, parseInt(delay.toString()));
                 }
             });
         },
