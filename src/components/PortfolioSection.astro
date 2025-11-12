@@ -1,0 +1,220 @@
+---
+import PortfolioCard from "./PortfolioCard.astro";
+import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
+import {portfolios} from "../data/portfolios";
+---
+
+<section class="py-20 bg-white overflow-hidden" id="portfolio">
+    <div class="max-w-7xl mx-auto px-4">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-12 portfolio-header">
+            <div>
+                <div class="flex items-center gap-2 mb-3" data-aos="fade-up" data-aos-delay="100">
+                    <span class="text-blue-400 text-lg">✱</span>
+                    <span class="text-blue-400 font-semibold tracking-wide uppercase text-sm">Visual Excellence</span>
+                    <span class="text-blue-400 text-lg">✱</span>
+                </div>
+                <h2 class="text-5xl font-bold text-gray-900" data-aos="fade-up" data-aos-delay="200">
+                    Our Creative Showcase
+                </h2>
+            </div>
+            <a
+                    href="/our-work"
+                    class="hidden md:block px-8 py-3 bg-blue-400 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
+                    data-aos="fade-left"
+                    data-aos-delay="300"
+            >
+                View All Portfolio
+            </a>
+        </div>
+
+        <!-- Swiper Slider -->
+        <div data-aos="fade-up" data-aos-delay="400">
+            <Swiper
+                    class="portfolio-swiper pb-20"
+                    options={{
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        breakpoints: {
+                            640: {
+                                slidesPerView: 1.5,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 25,
+                            },
+                            1024: {
+                                slidesPerView: 2.5,
+                                spaceBetween: 30,
+                            },
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                            renderBullet: function (index, className) {
+                                return '<span class="' + className + '"></span>';
+                            },
+                        },
+                        loop: true,
+                        autoplay: {
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        },
+                        speed: 800,
+                        effect: 'slide',
+                    }}
+            >
+                <SwiperWrapper>
+                    {
+                        portfolios.map((portfolio, i) => (
+                                <SwiperSlide>
+                                    <PortfolioCard
+                                            title={portfolio.title}
+                                            description={portfolio.shortDesc}
+                                            category={portfolio.category}
+                                            image={portfolio.image}
+                                            link={"/our-work/" + portfolio.slug}
+                                    />
+                                </SwiperSlide>
+                        ))
+                    }
+                </SwiperWrapper>
+            </Swiper>
+
+            <!-- Custom Pagination Indicators -->
+            <div class="flex justify-center mt-8">
+                <div class="swiper-pagination !relative !bottom-0"></div>
+            </div>
+        </div>
+
+        <!-- Mobile View All Button -->
+        <div class="md:hidden text-center mt-8" data-aos="fade-up" data-aos-delay="500">
+            <a
+                    href="/our-work"
+                    class="inline-block px-8 py-3 bg-blue-400 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
+            >
+                View All Portfolio
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* AOS Animations */
+    [data-aos] {
+        opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-aos="fade-up"] {
+        transform: translateY(40px);
+    }
+
+    [data-aos="fade-down"] {
+        transform: translateY(-40px);
+    }
+
+    [data-aos="fade-left"] {
+        transform: translateX(40px);
+    }
+
+    [data-aos="fade-right"] {
+        transform: translateX(-40px);
+    }
+
+    [data-aos].aos-animate {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Custom Swiper Pagination Styling */
+    :global(.swiper-pagination) {
+        position: relative !important;
+        bottom: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 12px !important;
+        margin-top: 2rem !important;
+    }
+
+    :global(.swiper-pagination-bullet) {
+        width: 16px !important;
+        height: 16px !important;
+        background: white !important;
+        opacity: 1 !important;
+        transition: all 0.4s ease !important;
+        border-radius: 50% !important;
+        cursor: pointer !important;
+        margin: 0 !important;
+        border: 3px solid #64748b !important;
+    }
+
+    :global(.swiper-pagination-bullet:hover) {
+        border-color: #475569 !important;
+        transform: scale(1.2) !important;
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+        background: #51a2ff !important;
+        border-color: #51a2ff !important;
+        width: 50px !important;
+        border-radius: 10px !important;
+        transform: scale(1) !important;
+    }
+
+    /* Smooth slide transitions */
+    :global(.portfolio-swiper .swiper-slide) {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    :global(.portfolio-swiper .swiper-slide-active) {
+        z-index: 2;
+    }
+
+    /* Add subtle animation on slide change */
+    @keyframes slideIn {
+        from {
+            opacity: 0.5;
+            transform: scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    :global(.portfolio-swiper .swiper-slide-active > *) {
+        animation: slideIn 0.6s ease-out;
+    }
+
+</style>
+
+<script>
+    // Enhanced intersection observer with stagger effect
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.getAttribute('data-aos-delay') || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('aos-animate');
+                    }, parseInt(delay.toString()));
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        }
+    );
+
+    document.querySelectorAll('[data-aos]').forEach((el) => observer.observe(el));
+</script>

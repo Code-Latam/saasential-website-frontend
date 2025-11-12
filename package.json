@@ -1,0 +1,23 @@
+{
+  "name": "saasential-website-frontend",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.5",
+    "@astrojs/sitemap": "^3.6.0",
+    "@iconify-json/fa7-brands": "^1.2.0",
+    "@iconify-json/fa7-solid": "^1.2.2",
+    "@tailwindcss/vite": "^4.1.15",
+    "astro": "^5.14.8",
+    "astro-icon": "^1.1.5",
+    "astro-swiper": "^1.1.0",
+    "tailwindcss": "^4.1.15",
+    "typescript": "^5.9.3"
+  }
+}

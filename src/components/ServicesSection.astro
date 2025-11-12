@@ -1,0 +1,105 @@
+---
+
+import ServiceCard from "./ServiceCard.astro";
+import {servicesContent} from "../content/content";
+import {services} from "../data/services";
+---
+
+<section id="services" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        <!-- Header -->
+        <div class="text-start mb-16">
+
+            <div class="flex justify-between items-center mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <span class="text-blue-400 text-lg">✱</span>
+                        <span class="text-blue-400 font-semibold tracking-wide uppercase text-sm">{servicesContent.badge.text}</span>
+                        <span class="text-blue-400 text-lg">✱</span>
+                    </div>
+                    <h2 class="text-5xl font-bold text-gray-900" data-aos="fade-up" data-aos-delay="200">
+                        {servicesContent.heading.main}
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            {
+                services.map((service, i) => (
+                        <div
+                                data-aos="fade-up"
+                                data-aos-delay={300 + i * 100}
+                        >
+                            <ServiceCard
+                                    title={service.title}
+                                    description={service.shortDesc}
+                                    icon={service.icon}
+                                    link={"/services/" + service.slug}
+                            />
+                        </div>
+                ))
+            }
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* AOS Animations */
+    [data-aos] {
+        opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-aos="fade-up"] {
+        transform: translateY(40px);
+    }
+
+    [data-aos="fade-down"] {
+        transform: translateY(-40px);
+    }
+
+    [data-aos="fade-left"] {
+        transform: translateX(40px);
+    }
+
+    [data-aos="fade-right"] {
+        transform: translateX(-40px);
+    }
+
+    [data-aos].aos-animate {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+
+</style>
+
+<script>
+    // Enhanced intersection observer with stagger effect
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.getAttribute('data-aos-delay') || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('aos-animate');
+                    }, parseInt(delay.toString()));
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        }
+    );
+
+    document.querySelectorAll('[data-aos]').forEach((el) => observer.observe(el));
+</script>
