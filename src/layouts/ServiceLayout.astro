@@ -15,7 +15,7 @@ import { Image } from 'astro:assets';
 <section class="bg-white  min-h-screen flex flex-col">
 
     <!-- ===== Hero Header ===== -->
-    <div class="relative w-full h-[500px] mb-20">
+    <div class="relative w-full mb-20 h-[600px] md:h-[550px] lg:h-[550px] overflow-hidden">
         <div class="absolute inset-0 overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-black">
             <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e3a8a_1px,transparent_1px),linear-gradient(to_bottom,#1e3a8a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-10"></div>
 
@@ -46,13 +46,13 @@ import { Image } from 'astro:assets';
                 <svg class="w-4 h-4 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
-                <span class="text-blue-400 font-medium">{service.title}</span>
+                <span class="text-blue-400 lg:font-medium sm:font-extralight text-balance">{service.title}</span>
             </nav>
         </div>
 
         <!-- Hero Title -->
         <div class="relative z-10 max-w-7xl mx-auto px-6 mt-16">
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 text-balance" data-aos="fade-up" data-aos-delay="100">
                 {service.title}
             </h1>
             <div class="h-1.5 w-24 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full" data-aos="fade-right" data-aos-delay="200"></div>
@@ -110,6 +110,7 @@ import { Image } from 'astro:assets';
                             </div>
                     ))}
                 </div>
+
 
             </div>
 
@@ -207,6 +208,32 @@ import { Image } from 'astro:assets';
             </div>
         </div>
     </div>
+
+    {service.detailedProcess && (
+            <section class="bg-white py-24 ">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="space-y-8 text-start" data-aos="fade-up">
+                        <h3 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                            {service.detailedProcess.heading}
+                        </h3>
+
+                        <p class="text-gray-600 text-lg max-w-4xl leading-relaxed">
+                            {service.detailedProcess.intro}
+                        </p>
+
+                        {service.detailedProcess.paragraphs.map((para:any, i:any) => (
+                                <p
+                                        class="text-gray-600 text-lg max-w-4xl leading-relaxed"
+                                        data-aos="fade-up"
+                                        data-aos-delay={200 + i * 100}
+                                >
+                                    {para}
+                                </p>
+                        ))}
+                    </div>
+                </div>
+            </section>
+    )}
 
     <!-- ===== Tools & Technologies Section ===== -->
     <div class="bg-white py-24">

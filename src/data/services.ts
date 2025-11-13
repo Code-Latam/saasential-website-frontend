@@ -4,7 +4,7 @@ export const services = [
         slug: "saas-architecture-development",
         title: "SaaS Architecture & Development",
         description:
-            "We design and build scalable SaaS platforms from the ground up — architected for performance, security, and growth. Saasential accelerates your go-to-market by combining modern frameworks with solid cloud infrastructure and CI/CD automation.",
+            "We design and build scalable SaaS platforms from the ground up architected for performance, security, and growth. Saasential accelerates your go-to-market by combining modern frameworks with solid cloud infrastructure and CI/CD automation.",
         image: "/images/saas-service.jpg",
         icon: "/icons/cloud-computing.png",
         keywords: ["SaaS", "Cloud", "Scalability", "Performance", "APIs"],
@@ -45,7 +45,7 @@ export const services = [
         slug: "fintech-payments-integration",
         title: "FinTech & Payments Integration",
         description:
-            "We specialize in building and integrating FinTech systems — from card and ACH processing to wallets, ledgers, and payout automation. Saasential delivers compliant, API-driven financial workflows that support regional and global expansion.",
+            "We specialize in building and integrating FinTech systems from card and ACH processing to wallets, ledgers, and payout automation. Saasential delivers compliant, API-driven financial workflows that support regional and global expansion.",
         image: "/images/payment-integration-service.jpg",
         keywords: ["FinTech", "Payments", "APIs", "Compliance", "Scalability"],
         icon: "/icons/fintech.png",
@@ -71,12 +71,12 @@ export const services = [
         ],
   tools: [
   { name: "Stripe", icon: "https://cdn.simpleicons.org/stripe" },
-  { name: "Moov", icon: "https://play-lh.googleusercontent.com/1pIMrf-HIK53Pg-b_fVzKQ_e0cPA5Y3BANNQ5V-f6zCqwfTK8D0sugl39LTiGgAl2qas" }, // ❌ not in Simple Icons — use placeholder below
+  { name: "Moov", icon: "https://play-lh.googleusercontent.com/1pIMrf-HIK53Pg-b_fVzKQ_e0cPA5Y3BANNQ5V-f6zCqwfTK8D0sugl39LTiGgAl2qas" },
   { name: "Plaid", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt9iXEJiMRkyKe2RnFGE7Mq7t_W3CUr3P6GQ&s" },
   { name: "PayPal", icon: "https://cdn.simpleicons.org/paypal" },
   { name: "Kafka", icon: "https://cdn.simpleicons.org/apachekafka" },
   { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
-  { name: "Webhooks", icon: "https://cdn-icons-png.flaticon.com/512/919/919829.png" }, // ❌ also not in Simple Icons — use alternative below
+  { name: "Webhooks", icon: "https://cdn-icons-png.flaticon.com/512/919/919829.png" },
 ]
 
     },
@@ -167,12 +167,13 @@ tools: [
         slug: "ai-automation-consulting",
         title: "AI & Automation Consulting",
         description:
-            "Saasential integrates AI agents and data automation into business workflows — from intelligent API assistants to vector-based data retrieval for support, compliance, and analytics.",
+            "Saasential integrates AI agents and data automation into business workflows from intelligent API assistants to vector-based data retrieval for support, compliance, and analytics.",
         image: "/images/ai-automation-service.png",
         keywords: ["AI", "Automation", "Agents", "Data Retrieval", "Workflows"],
         icon: "/icons/automation.png",
         shortDesc:
             "Integrate intelligent AI agents and automation pipelines into your SaaS or FinTech ecosystem.",
+
         points: [
             {
                 title: "Industry Relevance",
@@ -191,17 +192,38 @@ tools: [
                 desc: "Tailored agents and pipelines that align with specific business processes.",
             },
         ],
-tools: [
-  { name: "LangChain", icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/langchain-ipuhh4qo1jz5ssl4x0g2a.png/langchain-dp1uxj2zn3752pntqnpfu2.png?_a=DATAg1AAZAA0" }, // ❌ not in Simple Icons
-  { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai" }, // ✅ official
-  { name: "TinyLlama", icon: "https://www.shutterstock.com/image-vector/llama-icon-animals-collection-thin-260nw-2206705893.jpg" }, // ❌ not in Simple Icons
-  { name: "MongoDB Vector Search", icon: "https://cdn.simpleicons.org/mongodb" }, // ✅ official MongoDB
-  { name: "Python", icon: "https://cdn.simpleicons.org/python" }, // ✅ official
-  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" }, // ✅ official
-  { name: "Azure Cognitive Services", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbe6SI90ijl1P3qK5YMiz_k9o1wm590JvGAQ&s" }, // ✅ official
-]
 
+        detailedProcess: {
+            heading: "Automating the Qualification Process",
+            intro:
+                "We automate the entire lead qualification journey so your team can focus on closing, not chasing. Once your data pipelines are connected, our AI systems handle what used to be manual pre-sales work analyzing enriched lead data, identifying intent signals, and triggering personalized outreach at scale.",
+
+            paragraphs: [
+                "Our AI-driven agents manage the first stage of engagement, sending tailored messages, following up intelligently, and routing conversations based on outcomes. The system continues autonomously until a defined milestone is reached such as a verified response, confirmed interest, or a meeting booked directly on your team’s calendar.",
+                "Once the meeting is booked, your Business Development Representative takes over using API Astrolab to visually demonstrate how your APIs actually work. In a focused 10-minute interactive session, prospects can see your technology in action, turning early interest into clear understanding and qualified conversion."
+            ],
+        },
+
+        tools: [
+            {
+                name: "LangChain",
+                icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/langchain-ipuhh4qo1jz5ssl4x0g2a.png/langchain-dp1uxj2zn3752pntqnpfu2.png?_a=DATAg1AAZAA0",
+            },
+            { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai" },
+            {
+                name: "TinyLlama",
+                icon: "https://www.shutterstock.com/image-vector/llama-icon-animals-collection-thin-260nw-2206705893.jpg",
+            },
+            { name: "MongoDB Vector Search", icon: "https://cdn.simpleicons.org/mongodb" },
+            { name: "Python", icon: "https://cdn.simpleicons.org/python" },
+            { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
+            {
+                name: "Azure Cognitive Services",
+                icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbe6SI90ijl1P3qK5YMiz_k9o1wm590JvGAQ&s",
+            },
+        ],
     },
+
     {
         slug: "strategic-it-consulting",
         title: "Strategic IT Consulting & Retainer Services",

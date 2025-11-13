@@ -14,7 +14,7 @@ export const heroContent = {
 
     cta: {
         text: "Schedule a Free Consultation",
-        link: "#contact",
+        link: "/book-meeting",
         ariaLabel: "Schedule a free consultation with Saasential"
     },
 
@@ -107,7 +107,7 @@ export const faqContent = {
         },
         {
             question: "What technologies do you specialize in?",
-            answer: "Saasential's expertise spans a broad, FinTech-driven technology stack built for speed, compliance, and scalability.\n\nCore Engineering & Frameworks:\n• Frontend: React, Astro, Next.js, TailwindCSS\n• Backend: Node.js, Express, NestJS, Fastify, and occasionally Python (FastAPI) for data-heavy tasks\n• Databases: MongoDB Atlas, PostgreSQL, Redis, and vector databases for intelligent search and automation\n\nFinTech & Payments Stack:\n• Payments & Banking APIs: Stripe, Moov, Astra, Circle, Flutterwave, PayPal/Braintree, Alchemy Pay\n• Open Banking & Aggregation: Plaid, Teller, Truelayer, Finicity\n• Compliance & Identity: Alloy, Sardine, Sumsub, Persona, Veriff, Onfido\n• Ledgering & Wallet Systems: custom micro-ledgers, double-entry accounting models, Webhooks-driven reconciliation\n• Messaging & Workflow Automation: Kafka, RabbitMQ, and webhook-based event orchestration for real-time financial operations\n\nCloud & Infrastructure:\n• Cloud Providers: Azure, AWS, DigitalOcean\n• Containerization & CI/CD: Docker, GitHub Actions, Azure DevOps\n• Monitoring & Security: Datadog, Snyk, Cloudflare Zero Trust\n\nAI & Automation Layer:\n• LLM & Data Tools: LangChain, OpenAI, TinyLlama, custom vector DB search for data intelligence\n• Process Acceleration: conversational AI agents for workflow design and API workflow testing\n\nWe support multi-stack environments to ensure velocity — from prototyping new FinTech products to scaling compliant, production-ready payment and onboarding systems across regions."
+            answer: "Saasential's expertise spans a broad, FinTech-driven technology stack built for speed, compliance, and scalability.\n\nCore Engineering & Frameworks:\n• Frontend: React, Astro, Next.js, TailwindCSS\n• Backend: Node.js, Express, NestJS, Fastify, and occasionally Python (FastAPI) for data-heavy tasks\n• Databases: MongoDB Atlas, PostgreSQL, Redis, and vector databases for intelligent search and automation\n\nFinTech & Payments Stack:\n• Payments & Banking APIs: Stripe, Moov, Astra, Circle, Flutterwave, PayPal/Braintree, Alchemy Pay\n• Open Banking & Aggregation: Plaid, Teller, Truelayer, Finicity\n• Compliance & Identity: Alloy, Sardine, Sumsub, Persona, Veriff, Onfido\n• Ledgering & Wallet Systems: custom micro-ledgers, double-entry accounting models, Webhooks-driven reconciliation\n• Messaging & Workflow Automation: Kafka, RabbitMQ, and webhook-based event orchestration for real-time financial operations\n\nCloud & Infrastructure:\n• Cloud Providers: Azure, AWS, DigitalOcean\n• Containerization & CI/CD: Docker, GitHub Actions, Azure DevOps\n• Monitoring & Security: Datadog, Snyk, Cloudflare Zero Trust\n\nAI & Automation Layer:\n• LLM & Data Tools: LangChain, OpenAI, TinyLlama, custom vector DB search for data intelligence\n• Process Acceleration: conversational AI agents for workflow design and API workflow testing\n\nWe support multi-stack environments to ensure velocity from prototyping new FinTech products to scaling compliant, production-ready payment and onboarding systems across regions."
         },
         {
             question: "What is your project pricing model?",
@@ -117,7 +117,7 @@ export const faqContent = {
             question: "How can I get a quote or consultation?",
             answer: "You can request a consultation directly through our website or schedule a call via our",
             highlight:"Calendly",
-            link: "https://calendly.com/steven-apiastrolab/30min",
+            link: "/book-meeting",
             continuation: "\nDuring the call, we'll discuss your goals, current systems, and technical needs. Within a few days, we'll provide a tailored proposal outlining the best approach, estimated timeline, and cost.\n\nFor general inquiries, contact us at info@saasential.tech.",
         }
     ]
@@ -200,6 +200,27 @@ export const approachContent = {
             img: "/images/approach-img4.png"
         }
     ]
+}
+
+export const automationContent = {
+    id: "automation",
+    title: "Automating the Qualification Process",
+    subtitle: "AI Automation",
+    content: [
+    {
+        text: "We automate the entire lead qualification journey so your team can focus on closing, not chasing. Once your data pipelines are connected, our AI systems handle what used to be manual pre-sales work analyzing enriched lead data, identifying intent signals, and triggering personalized outreach at scale."
+    },
+    {
+        text: "Our AI-driven agents manage the first stage of engagement, sending tailored messages, following up intelligently, and routing conversations based on outcomes. The system continues autonomously until a defined milestone is reached such as a verified response, confirmed interest, or a meeting booked directly on your team’s calendar."
+    },
+    {
+        text: "Once the meeting is booked, your Business Development Representative takes over using API Astrolab to visually demonstrate how your APIs actually work. In a focused 10-minute interactive session, prospects can see your technology in action, turning early interest into clear understanding and qualified conversion.",
+        link: {
+            "label": "API Astrolab",
+            "url": "https://www.apiastrolab.com/en/"
+        }
+    }
+]
 }
 
 export const footerContent = {
