@@ -14,8 +14,8 @@ export const portfolios = [
         industry: "Financial Technology / Digital Payments",
         stack: ["Node.js", "Express", "React", "MongoDB Atlas", "Azure Static Web Apps", "Stripe", "Moov", "Astra", "Circle", "Redis", "GitHub Actions"],
         image: '/images/portfolio/cutfreeportfolio.png',
-        shortDesc: "A unified platform managing multiple payment methods — cards, bank transfers, and digital wallets — under one secure, scalable infrastructure with real-time reconciliation.",
-        challenge: "CellPay needed a unified platform to manage multiple payment methods — cards, bank transfers, and digital wallets — under one secure, scalable infrastructure. They required a system capable of handling high transaction volumes, real-time reconciliation, and modular onboarding for merchants.",
+        shortDesc: "A unified platform managing multiple payment methods cards, bank transfers, and digital wallets under one secure, scalable infrastructure with real-time reconciliation.",
+        challenge: "CellPay needed a unified platform to manage multiple payment methods cards, bank transfers, and digital wallets under one secure, scalable infrastructure. They required a system capable of handling high transaction volumes, real-time reconciliation, and modular onboarding for merchants.",
         solution: "Saasential architected and developed a full SaaS payment platform with built-in wallet and ledger modules, instant settlement flows, and a robust API layer for third-party integrations. We focused on reliability, regulatory readiness, and ease of merchant onboarding.",
         process: [
             {
