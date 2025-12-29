@@ -1,6 +1,88 @@
 
 export const services = [
     {
+        slug:"astrolab-meeting-maker",
+        title:"The Astrolab Meeting maker. Better than a human SDR",
+        description: "Our AI-powered Meeting Maker automates lead qualification and meeting scheduling with human-like precision. By leveraging advanced natural language processing and seamless calendar integrations, it handles outreach, follow-ups, and booking, freeing your sales team to focus on closing deals.",
+        highlight:{
+            text:"Astrolab Meeting Maker,",
+            url:"https://www.meetingmaker.tech"
+        },
+        continueDescription:" the AI-driven solution that transforms your sales outreach by automating lead qualification and meeting scheduling with unparalleled efficiency and personalization.",
+        image:"/images/meeting-maker-service.png",
+        keywords:["AI", "Automation", "Lead Qualification", "Meeting Scheduling", "Sales"],
+        icon:"/icons/search.png",
+        shortDesc:
+            "AI-driven lead qualification and meeting scheduling that scales your sales outreach effortlessly.",
+        points: [
+            {
+                title: "Industry Relevance",
+                desc: "Ideal for B2B SaaS, FinTech, and API-driven companies looking to scale sales outreach.",
+            },
+            {
+                title: "Scalability & Performance",
+                desc: "Handles thousands of leads simultaneously with consistent quality and speed.",
+            },
+            {
+                title: "Integration Capabilities",
+                desc: "Seamlessly connects with CRM systems, email platforms, and calendar apps.",
+            },
+            {
+                title: "Customization & Flexibility",
+                desc: "Tailors messaging and follow-up strategies to match your brand voice and sales process.",
+            }
+        ],
+  tools: [
+    { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai" },
+    { name: "LangChain", icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/langchain-ipuhh4qo1jz5ssl4x0g2a.png/langchain-dp1uxj2zn3752pntqnpfu2.png?_a=DATAg1AAZAA0" },
+]
+    },
+    {
+        slug: "api-astrolab-visualization",
+        title: "The API Astrolab. Sell and explain your APIs with visual workflows",
+        description:
+            "Through our proprietary platform",
+        highlight:{
+            text:"API Astrolab,",
+            url:"https://www.apiastrolab.com/en/"
+        },
+        continueDescription:" we help teams visualize, test, and document complex API workflows. It bridges the gap between sales, solution engineers, and developers by transforming technical APIs into clear, visual flows.",
+        image: "/images/api-visualization-service.webp",
+        keywords: ["API", "Visualization", "Documentation", "Collaboration", "Workflows"],
+        icon: "/icons/endpoint-protection.png",
+        shortDesc:
+            "Visualize and manage complex API workflows with interactive documentation and team collaboration.",
+        points: [
+            {
+                title: "Industry Relevance",
+                desc: "Designed for API-first companies, SaaS vendors, and FinTech integrators.",
+            },
+            {
+                title: "Scalability & Performance",
+                desc: "Handles large multi-API ecosystems efficiently.",
+            },
+            {
+                title: "Integration Capabilities",
+                desc: "Connects with Jira, Confluence, and internal API registries.",
+            },
+            {
+                title: "Customization & Flexibility",
+                desc: "Customizable diagrams, documentation exports, and client demos.",
+            },
+        ],
+        tools: [
+            { name: "OpenAPI", icon: "https://cdn.simpleicons.org/openapiinitiative" },
+            { name: "Redocly", icon: "https://pbs.twimg.com/profile_images/1502378202316038148/nVGMA8QF.jpg" },
+            { name: "ReadMe", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGwKVO2WNyLOczKSrfXYQI5pwphywg8KlKuA&s" },
+            { name: "Wiki.js", icon: "https://www.markdownguide.org/assets/images/tool-icons/wikijs.png" },
+            { name: "React", icon: "https://cdn.simpleicons.org/react" },
+            { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
+            { name: "Axios", icon: "https://cdn.simpleicons.org/axios" },
+        ]
+
+
+    },
+    {
         slug: "saas-architecture-development",
         title: "SaaS Architecture & Development",
         description:
@@ -78,51 +160,6 @@ export const services = [
   { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
   { name: "Webhooks", icon: "https://cdn-icons-png.flaticon.com/512/919/919829.png" },
 ]
-
-    },
-    {
-        slug: "api-design-workflow-visualization",
-        title: "API Design & Workflow Visualization (API Astrolab)",
-        description:
-            "Through our proprietary platform",
-        highlight:{
-            text:"API Astrolab,",
-            url:"https://www.apiastrolab.com/en/"
-        },
-        continueDescription:" we help teams visualize, test, and document complex API workflows. It bridges the gap between sales, solution engineers, and developers by transforming technical APIs into clear, visual flows.",
-        image: "/images/api-visualization-service.webp",
-        keywords: ["API", "Visualization", "Documentation", "Collaboration", "Workflows"],
-        icon: "/icons/endpoint-protection.png",
-        shortDesc:
-            "Visualize and manage complex API workflows with interactive documentation and team collaboration.",
-        points: [
-            {
-                title: "Industry Relevance",
-                desc: "Designed for API-first companies, SaaS vendors, and FinTech integrators.",
-            },
-            {
-                title: "Scalability & Performance",
-                desc: "Handles large multi-API ecosystems efficiently.",
-            },
-            {
-                title: "Integration Capabilities",
-                desc: "Connects with Jira, Confluence, and internal API registries.",
-            },
-            {
-                title: "Customization & Flexibility",
-                desc: "Customizable diagrams, documentation exports, and client demos.",
-            },
-        ],
-tools: [
-  { name: "OpenAPI", icon: "https://cdn.simpleicons.org/openapiinitiative" },
-  { name: "Redocly", icon: "https://pbs.twimg.com/profile_images/1502378202316038148/nVGMA8QF.jpg" },
-  { name: "ReadMe", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGwKVO2WNyLOczKSrfXYQI5pwphywg8KlKuA&s" },
-  { name: "Wiki.js", icon: "https://www.markdownguide.org/assets/images/tool-icons/wikijs.png" },
-  { name: "React", icon: "https://cdn.simpleicons.org/react" },
-  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
-  { name: "Axios", icon: "https://cdn.simpleicons.org/axios" },
-]
-
 
     },
     {

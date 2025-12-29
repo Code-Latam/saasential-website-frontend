@@ -32,7 +32,16 @@ import {automationContent} from "../content/content";
                                     </a>
                                     {item.text.split("API Astrolab")[1]}
                                 </>
-                        ) : (
+                        ) :item.text.split("Astrolab Meeting Maker").length > 1 ? (
+                                <>
+                                    {item.text.split("Astrolab Meeting Maker")[0]}
+                                    <a href={item.link?.url} target="_blank" class="text-blue-600 font-semibold hover:underline">
+                                        {item.link?.label}
+                                    </a>
+                                    {item.text.split("Astrolab Meeting Maker")[1]}
+                                </>
+                        )
+                            : (
                             item.text
                         )}
                     </p>
