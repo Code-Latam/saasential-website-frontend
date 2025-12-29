@@ -46,6 +46,12 @@ export const aboutContent = {
             highlight: "API Astrolab",
             link: "https://www.apiastrolab.com/en/",
             continuation: " our visual platform for API design, testing, and sales enablement, we empower teams to accelerate API adoption and streamline developer onboarding."
+        },
+        {
+            text: "Building on this foundation, we also created ",
+            highlight: "API Astrolab Meeting Maker,",
+            link: "https://www.meetingmaker.tech",
+            continuation: " an AI-driven solution that transforms how teams generate and qualify meetings by automating early-stage conversations and connecting the right prospects to the right people at the right time."
         }
     ],
 
@@ -208,13 +214,21 @@ export const automationContent = {
     subtitle: "AI Automation",
     content: [
     {
-        text: "We automate the entire lead qualification journey so your team can focus on closing, not chasing. Once your data pipelines are connected, our AI systems handle what used to be manual pre-sales work analyzing enriched lead data, identifying intent signals, and triggering personalized outreach at scale."
+        text: "With Astrolab Meeting Maker, we automate the entire lead qualification journey so your team can focus on closing not chasing. Once your data pipelines are connected, our AI systems take over what was traditionally manual pre-sales work: analyzing enriched lead data, identifying intent signals, and triggering personalized outreach at scale.",
+        link: {
+            "label": "Astrolab Meeting Maker",
+            "url": "https://www.meetingmaker.tech/"
+        }
     },
     {
-        text: "Our AI-driven agents manage the first stage of engagement, sending tailored messages, following up intelligently, and routing conversations based on outcomes. The system continues autonomously until a defined milestone is reached such as a verified response, confirmed interest, or a meeting booked directly on your team’s calendar."
+        text: "AI-driven agents within Astrolab Meeting Maker manage the first stage of engagement by sending tailored messages, following up intelligently, and routing conversations based on real outcomes. The system operates autonomously until a defined milestone is reached whether that’s a verified response, confirmed interest, or a meeting booked directly onto your team’s calendar.",
+        link: {
+            "label": "Astrolab Meeting Maker",
+            "url": "https://www.meetingmaker.tech/"
+        }
     },
     {
-        text: "Once the meeting is booked, your Business Development Representative takes over using API Astrolab to visually demonstrate how your APIs actually work. In a focused 10-minute interactive session, prospects can see your technology in action, turning early interest into clear understanding and qualified conversion.",
+        text: "Once a meeting is booked, your Business Development Representative takes over using API Astrolab to visually demonstrate how your APIs actually work. In a focused 10-minute interactive session, prospects experience your technology in action, transforming early interest into clear understanding and a qualified conversion.",
         link: {
             "label": "API Astrolab",
             "url": "https://www.apiastrolab.com/en/"
