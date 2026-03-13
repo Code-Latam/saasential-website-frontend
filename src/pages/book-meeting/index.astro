@@ -73,13 +73,17 @@ import SEO from "../../components/SEO.astro";
             </div>
         </div>
 
-        <!-- Calendly Widget Container -->
-        <div class="justify-center items-center px-6 mb-20 overflow-hidden transition-transform duration-700 hover:scale-[1.01]"
-             data-aos="zoom-in" data-aos-duration="1000">
-            <div class="calendly-inline-widget"
-                 data-url="https://calendly.com/steven-apiastrolab/30min?embed_type=Inline&hide_landing_page_details=1&hide_gdpr_banner=1&back=1"
-                 style="min-width: 320px; height: 700px"></div>
-        </div>
+        <!-- Calendly Iframe Container -->
+<div class="justify-center items-center px-6 mb-20 overflow-hidden transition-transform duration-700 hover:scale-[1.01]"
+     data-aos="zoom-in" data-aos-duration="1000">
+    <iframe 
+        src="https://calendly.com/steven-apiastrolab/30min"
+        width="100%"
+        height="700"
+        frameborder="0"
+        style="min-width: 320px; height: 700px; border: none; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+    </iframe>
+</div>
 
     </section>
 
