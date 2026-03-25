@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 Disallow: /book-meeting
-Sitemap: https://www.saasential.tech/sitemap.xml
+Sitemap: https://www.saasential.tech/sitemap-index.xml
