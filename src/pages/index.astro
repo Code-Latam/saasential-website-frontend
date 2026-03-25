@@ -11,17 +11,26 @@ import FaqSection from "../components/FaqSection.astro";
 import ContactSection from "../components/ContactSection.astro";
 import Footer from "../components/Footer.astro";
 import AutomatingSection from "../components/AutomatingSection.astro";
+
+// Homepage-specific SEO
+const seoTitle = "Saasential – FinTech & SaaS Development Experts";
+const seoDescription = "Wyoming-based software company specializing in scalable SaaS, FinTech platforms, API integration, and technical documentation. Turn your vision into production-ready digital products.";
+const seoKeywords = "SaaS development company, FinTech consulting, API integration services, software development Wyoming, technical documentation, payment integration, cloud architecture";
 ---
 
-<Layout>
-	<Navbar />
-	<HeroSection />
-	<AboutSection/>
-	<ServicesSection/>
-	<PortfolioSection />
-	<ApproachSection/>
-	<FaqSection/>
-	<AutomatingSection/>
-	<ContactSection/>
-	<Footer/>
+<Layout 
+  title={seoTitle} 
+  description={seoDescription} 
+  keywords={seoKeywords}
+>
+  <Navbar />
+  <HeroSection />
+  <AboutSection/>
+  <ServicesSection/>
+  <PortfolioSection />
+  <ApproachSection/>
+  <FaqSection/>
+  <AutomatingSection/>
+  <ContactSection/>
+  <Footer/>
 </Layout>

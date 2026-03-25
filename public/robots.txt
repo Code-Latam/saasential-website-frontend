@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://www.saasential.tech/sitemap-index.xml
+Disallow: /admin/
+Disallow: /api/
+Disallow: /book-meeting
+Sitemap: https://www.saasential.tech/sitemap.xml

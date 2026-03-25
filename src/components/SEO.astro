@@ -1,23 +1,56 @@
 ---
+export interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  publishedTime?: string;
+  updatedTime?: string;
+  author?: string;
+  noIndex?: boolean;
+}
 
 const {
-    title = "Saasential – Software & Consulting Company",
-    description = "Saasential LLC designs and builds scalable SaaS and FinTech platforms with expertise in APIs, automation, and cloud systems.",
-    keywords = "Saasential, SaaS development, FinTech solutions, software consulting, cloud architecture, API automation",
-    image = "https://www.saasential.tech/logo/saasential_logo.svg",
-    url = "https://www.saasential.tech",
-    type = "website"
+  title = "Saasential – Software & Consulting Company",
+  description = "Saasential LLC designs and builds scalable SaaS and FinTech platforms with expertise in APIs, automation, and cloud systems.",
+  keywords = "Saasential, SaaS development, FinTech solutions, software consulting, cloud architecture, API automation, payment integration",
+  // Use dedicated OG image for social sharing (1200x630)
+  image = "https://www.saasential.tech/og-image.png",
+  url = "https://www.saasential.tech",
+  type = "website",
+  publishedTime,
+  updatedTime,
+  author = "Saasential LLC",
+  noIndex = false,
 } = Astro.props;
+
+// Ensure image has absolute URL (important for social sharing)
+const absoluteImage = image.startsWith('http') ? image : `https://www.saasential.tech${image}`;
+// Also create a fallback image path for logo (used in structured data)
+const logoImage = "https://www.saasential.tech/logo/saasential_logo.png";
 ---
 
 <title>{title}</title>
 <meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="robots" content="index, follow" />
-<meta name="author" content="Saasential LLC" />
+
+<!-- Robots -->
+{noIndex ? (
+  <meta name="robots" content="noindex, nofollow" />
+) : (
+  <meta name="robots" content="index, follow" />
+)}
+<meta name="googlebot" content="index, follow" />
+<meta name="author" content={author} />
 <meta charset="UTF-8" />
-<link rel="icon" type="image/svg+xml" href="/logo/saasential_logo.svg" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 <!-- Canonical -->
 <link rel="canonical" href={url} />
@@ -27,26 +60,46 @@ const {
 <meta property="og:description" content={description} />
 <meta property="og:type" content={type} />
 <meta property="og:url" content={url} />
-<meta property="og:image" content={image} />
+<meta property="og:image" content={absoluteImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:site_name" content="Saasential" />
+<meta property="og:locale" content="en_US" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={image} />
+<meta name="twitter:image" content={absoluteImage} />
 <meta name="twitter:creator" content="@Saasential" />
+<meta name="twitter:site" content="@Saasential" />
 
+<!-- Article specific meta (for blog/posts) -->
+{publishedTime && <meta property="article:published_time" content={publishedTime} />}
+{updatedTime && <meta property="article:modified_time" content={updatedTime} />}
+{author && <meta property="article:author" content={author} />}
 
 <!-- Schema.org Structured Data -->
 <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Saasential LLC",
-    "url": url,
-    "logo": "https://www.saasential.tech/logo/saasential_logo.svg",
-    "sameAs": [
-        "https://www.linkedin.com/company/saasential-llc"
-    ],
-    "description": description
-})}>
-</script>
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Saasential LLC",
+  "url": url,
+  "logo": logoImage,
+  "sameAs": [
+    "https://www.linkedin.com/company/saasential-llc"
+  ],
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Wyoming",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1 (307) 3945087",
+    "contactType": "customer service",
+    "email": "info@saasential.tech"
+  }
+})} />
