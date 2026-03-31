@@ -7,7 +7,7 @@ export const heroContent = {
 
     heading: {
         main: "Delivering the Sales and SEO Agents that Power the Modern startup",
-        highlighted: "modern AI Sales innovation"
+        highlighted: "AI Sales innovation"
     },
 
     subtitle: "Saasential LLC is a Wyoming-based software and consulting company that designs and builds scalable  platforms. We turn complex sales ecosystems into simple, automated, and compliant digital products",
