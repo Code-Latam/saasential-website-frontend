@@ -2,7 +2,7 @@
 export const services = [
     {
         slug:"astrolab-meeting-maker",
-        title:"The Astrolab Meeting maker. Better than a human SDR",
+        title:"The Astrolab Meeting maker. All the AI agents you need for inbound and outbound",
         description: "Our AI-powered Meeting Maker automates lead qualification and meeting scheduling with human-like precision. By leveraging advanced natural language processing and seamless calendar integrations, it handles outreach, follow-ups, and booking, freeing your sales team to focus on closing deals.",
         highlight:{
             text:"Astrolab Meeting Maker,",
@@ -10,14 +10,14 @@ export const services = [
         },
         continueDescription:" the AI-driven solution that transforms your sales outreach by automating lead qualification and meeting scheduling with unparalleled efficiency and personalization.",
         image:"/images/meeting-maker-service.png",
-        keywords:["AI", "Automation", "Lead Qualification", "Meeting Scheduling", "Sales"],
+        keywords:["AI", "Automation", "Lead Qualification", "Meeting Scheduling", "Sales", "SEO", "BDR", "SDR", "Customer Service Representative"],
         icon:"/icons/search.png",
         shortDesc:
-            "AI-driven lead qualification and meeting scheduling that scales your sales outreach effortlessly.",
+            "AI-driven lead qualification and meeting scheduling that scales your inbound and outbound sales effortlessly.",
         points: [
             {
                 title: "Industry Relevance",
-                desc: "Ideal for B2B SaaS, FinTech, and API-driven companies looking to scale sales outreach.",
+                desc: "Ideal for B2B SaaS, FinTech, and API-driven companies looking to scale inbound and outbound sales.",
             },
             {
                 title: "Scalability & Performance",

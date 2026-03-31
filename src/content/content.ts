@@ -6,11 +6,11 @@ export const heroContent = {
     },
 
     heading: {
-        main: "Building the engines that power",
+        main: "Delivering the Sales and SEO Agents that Power the Modern startup",
         highlighted: "modern FinTech and SaaS innovation"
     },
 
-    subtitle: "Saasential LLC is a Wyoming-based software and consulting company that designs and builds scalable SaaS and FinTech platforms. We turn complex financial and API ecosystems into simple, automated, and compliant digital products",
+    subtitle: "Saasential LLC is a Wyoming-based software and consulting company that designs and builds scalable SaaS and FinTech platforms. We turn complex sales ecosystems into simple, automated, and compliant digital products",
 
     cta: {
         text: "Schedule a Free Consultation",
