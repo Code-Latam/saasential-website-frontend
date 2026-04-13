@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel/serverless';  // Use /serverless for SSR
+import vercel from '@astrojs/vercel/serverless';  // Use /serverless for v7
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import icon from 'astro-icon';
@@ -8,7 +8,7 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.saasential.tech',
-  output: 'server',  // Required for SSR
+  output: 'server',
   adapter: vercel(),
   vite: {
     plugins: [tailwindcss()]
