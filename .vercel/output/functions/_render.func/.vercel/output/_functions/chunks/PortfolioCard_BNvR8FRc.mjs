@@ -1,0 +1,30 @@
+import { c as createAstro, d as createComponent, m as maybeRenderHead, r as renderComponent, e as addAttribute, f as renderTemplate } from './astro/server_C5mQ-R22.mjs';
+import 'kleur/colors';
+import { $ as $$Image } from './_astro_assets_vsPFFUr9.mjs';
+
+const ArrowRightIcon = new Proxy({"src":"/_astro/right-arrow.DYu7s53j.png","width":106,"height":106,"format":"png"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Github/saasential-website-frontend/public/icons/right-arrow.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const $$Astro = createAstro("https://www.saasential.tech");
+const $$PortfolioCard = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$PortfolioCard;
+  const { title, description, category, image, link } = Astro2.props;
+  return renderTemplate`${maybeRenderHead()}<div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-[400px]"> <!-- Background Image --> ${renderComponent($$result, "Image", $$Image, { "src": image, "alt": title, "height": 400, "width": 600, "class": "w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" })} <!-- Gradient Overlay --> <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div> <!-- Content --> <div class="absolute inset-0 p-6 flex flex-col justify-between"> <!-- Logo/Brand (Top) --> <div class="flex justify-between items-start"> <!--<div class="text-white font-bold text-xl opacity-90">Saasential</div>--> </div> <!-- Bottom Content --> <div class="space-y-3"> <!-- Category Badge --> <div class="inline-block"> <span class="px-4 py-1.5 rounded-full border border-white/40 text-white text-sm font-medium backdrop-blur-sm"> ${category.toString().split("/")[0].trim()} </span> </div> <!-- Title --> <h3 class="text-white text-2xl font-bold leading-tight mb-1"> ${title} </h3> <!-- Description (Optional - shows on hover) --> <!--{description && (
+                    <p class="text-white/80 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {description}
+                    </p>
+            )}--> </div> </div> <!-- Hover Arrow --> <div class="absolute top-12 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-2 right-6 z-10"> <img${addAttribute(ArrowRightIcon.src, "src")} alt="Arrow Right" class="w-20 h-20"> </div> <!-- Click Area --> <a${addAttribute(link, "href")} target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10"${addAttribute(`View ${title} project`, "aria-label")}></a> </div>`;
+}, "C:/Github/saasential-website-frontend/src/components/PortfolioCard.astro", void 0);
+
+export { $$PortfolioCard as $ };
