@@ -1,22 +1,40 @@
 ---
+// Force static generation
+export const prerender = true;
+
 import { services } from "../../data/services";
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
 import SEO from "../../components/SEO.astro";
 
 export async function getStaticPaths() {
-    return services.map((service) => ({
-        params: { slug: service.slug },
-        props: { service },
-    }));
+    console.log("=== getStaticPaths START ===");
+    console.log("Total services:", services.length);
+    
+    const paths = services.map((service) => {
+        console.log("Creating path for slug:", service.slug);
+        return {
+            params: { slug: service.slug },
+            props: { service }
+        };
+    });
+    
+    console.log("Total paths generated:", paths.length);
+    console.log("=== getStaticPaths END ===");
+    return paths;
 }
 
 const { service } = Astro.props;
+
+if (!service) {
+    throw new Error(`Service not found for slug: ${Astro.params.slug}`);
+}
 ---
+
 <SEO
-        title={`${service.title} | Saasential`}
-        description={service.shortDesc}
-        keywords={service.keywords}
-        image={service.image}
-        url={`https://www.saasential.tech/services/${service.slug}`}
- />
+    title={`${service.title} | Saasential`}
+    description={service.shortDesc}
+    keywords={service.keywords}
+    image={service.image}
+    url={`https://www.saasential.tech/services/${service.slug}`}
+/>
 <ServiceLayout {service} />

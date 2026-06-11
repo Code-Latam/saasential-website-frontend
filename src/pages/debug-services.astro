@@ -1,0 +1,21 @@
+---
+import { services } from "../data/services";
+---
+
+<html>
+<head><title>Debug Services</title></head>
+<body>
+    <h1>Services Data Debug</h1>
+    
+    <h2>Number of services: {services?.length || 0}</h2>
+    
+    <h3>Service Slugs:</h3>
+    <ul>
+        {services?.map(service => (
+            <li>{service.slug} - {service.title}</li>
+        ))}
+    </ul>
+    
+    <pre>{JSON.stringify(services, null, 2)}</pre>
+</body>
+</html>
