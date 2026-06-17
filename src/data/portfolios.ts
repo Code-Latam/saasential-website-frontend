@@ -62,11 +62,11 @@ export const portfolios = [
         url: "https://pockyt.io",
         location: "United States",
         industry: "FinTech / Cross-border Payments",
-        stack: ["API Astrolab", "Wiki.js", "Node.js", "Confluence", "Jira Service Management", "MongoDB Atlas", "Discord Integration"],
+        stack: ["Wiki.js", "Node.js", "Confluence", "Jira Service Management", "MongoDB Atlas", "Discord Integration"],
         image: '/images/portfolio/pokytportfolio.png',
         shortDesc: "Advanced solution engineering support enabling better API product visualization, faster enterprise client onboarding, and improved internal knowledge sharing.",
         challenge: "Pockyt.io needed advanced solution engineering support for onboarding new enterprise clients, internal knowledge sharing, and API product showcasing. Their engineering and sales teams needed better visibility into how APIs interconnect and power real-world use cases.",
-        solution: "Saasential provided deep solution engineering support by implementing a ticketing and documentation ecosystem using Jira and Confluence integrated through custom Node.js services. We visualized their API products and payment workflows using API Astrolab, enabling faster onboarding, testing, and client demos.",
+        solution: "Saasential provided deep solution engineering support by implementing a ticketing and documentation ecosystem using Jira and Confluence integrated through custom Node.js services.",
         process: [
             {
                 title: "Internal System Audit & Requirements Gathering",
@@ -75,10 +75,6 @@ export const portfolios = [
             {
                 title: "Custom Integration between Jira, Confluence & Discord Bot",
                 desc: "Built custom Node.js integrations connecting Jira Service Management, Confluence documentation, and Discord for real-time notifications and streamlined communication."
-            },
-            {
-                title: "Workflow Visualization via API Astrolab",
-                desc: "Implemented API Astrolab to create visual representations of API workflows, payment flows, and integration patterns for better stakeholder understanding."
             },
             {
                 title: "Testing & Rollout across Solution Engineering Teams",

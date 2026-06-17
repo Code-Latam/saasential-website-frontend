@@ -37,51 +37,7 @@ export const services = [
     { name: "LangChain", icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/langchain-ipuhh4qo1jz5ssl4x0g2a.png/langchain-dp1uxj2zn3752pntqnpfu2.png?_a=DATAg1AAZAA0" },
 ]
     },
-    {
-        slug: "api-astrolab-visualization",
-        title: "The API Astrolab. Sell and explain your APIs with visual workflows",
-        description:
-            "Through our proprietary platform",
-        highlight:{
-            text:"API Astrolab,",
-            url:"https://www.apiastrolab.com/en/"
-        },
-        continueDescription:" we help teams visualize, test, and document complex API workflows. It bridges the gap between sales, solution engineers, and developers by transforming technical APIs into clear, visual flows.",
-        image: "/images/api-visualization-service.webp",
-        keywords: ["API", "Visualization", "Documentation", "Collaboration", "Workflows"],
-        icon: "/icons/endpoint-protection.png",
-        shortDesc:
-            "Visualize and manage complex API workflows with interactive documentation and team collaboration.",
-        points: [
-            {
-                title: "Industry Relevance",
-                desc: "Designed for API-first companies, SaaS vendors, and FinTech integrators.",
-            },
-            {
-                title: "Scalability & Performance",
-                desc: "Handles large multi-API ecosystems efficiently.",
-            },
-            {
-                title: "Integration Capabilities",
-                desc: "Connects with Jira, Confluence, and internal API registries.",
-            },
-            {
-                title: "Customization & Flexibility",
-                desc: "Customizable diagrams, documentation exports, and client demos.",
-            },
-        ],
-        tools: [
-            { name: "OpenAPI", icon: "https://cdn.simpleicons.org/openapiinitiative" },
-            { name: "Redocly", icon: "https://pbs.twimg.com/profile_images/1502378202316038148/nVGMA8QF.jpg" },
-            { name: "ReadMe", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGwKVO2WNyLOczKSrfXYQI5pwphywg8KlKuA&s" },
-            { name: "Wiki.js", icon: "https://www.markdownguide.org/assets/images/tool-icons/wikijs.png" },
-            { name: "React", icon: "https://cdn.simpleicons.org/react" },
-            { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
-            { name: "Axios", icon: "https://cdn.simpleicons.org/axios" },
-        ]
-
-
-    },
+    
     {
         slug: "saas-architecture-development",
         title: "SaaS Architecture & Development",
@@ -236,8 +192,8 @@ export const services = [
                 "We automate the entire lead qualification journey so your team can focus on closing, not chasing. Once your data pipelines are connected, our AI systems handle what used to be manual pre-sales work analyzing enriched lead data, identifying intent signals, and triggering personalized outreach at scale.",
 
             paragraphs: [
-                "Our AI-driven agents manage the first stage of engagement, sending tailored messages, following up intelligently, and routing conversations based on outcomes. The system continues autonomously until a defined milestone is reached such as a verified response, confirmed interest, or a meeting booked directly on your team’s calendar.",
-                "Once the meeting is booked, your Business Development Representative takes over using API Astrolab to visually demonstrate how your APIs actually work. In a focused 10-minute interactive session, prospects can see your technology in action, turning early interest into clear understanding and qualified conversion."
+                "Our AI-driven agents manage the first stage of engagement, sending tailored messages, following up intelligently, and routing conversations based on outcomes. The system continues autonomously until a defined milestone is reached such as a verified response, confirmed interest, or a meeting booked directly on your team’s calendar."
+                
             ],
         },
 

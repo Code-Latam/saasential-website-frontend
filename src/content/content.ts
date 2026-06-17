@@ -41,15 +41,10 @@ export const aboutContent = {
     },
 
     paragraphs: [
-        {
-            text: "As the company behind",
-            highlight: "API Astrolab",
-            link: "https://www.apiastrolab.com/en/",
-            continuation: " our visual platform for API design, testing, and sales enablement, we empower teams to accelerate API adoption and streamline developer onboarding."
-        },
+        
         {
             text: "Building on this foundation, we also created ",
-            highlight: "API Astrolab Meeting Maker,",
+            highlight: "Astrolab Meeting Maker,",
             link: "https://www.meetingmaker.tech",
             continuation: " an AI-driven solution that transforms how teams generate and qualify meetings by automating early-stage conversations and connecting the right prospects to the right people at the right time."
         }
@@ -101,7 +96,7 @@ export const faqContent = {
     faqs: [
         {
             question: "What services does Saasential provide?",
-            answer: "Saasential helps startups and enterprises design, build, and scale modern software systems - from concept to deployment. Our core services include:\n\n• SaaS architecture and development (full-stack, API-first platforms)\n• FinTech and payment system integration (ACH, cards, wallets, crypto rails, compliance mapping)\n• API design and workflow visualization through API Astrolab\n• Technical documentation and developer portals (Wiki.js, Redocly, ReadMe)\n• Consulting and IT strategy, including infrastructure, automation, and digital transformation projects\n• Solution Engineers as needed\n\nWe combine software engineering, product design, and technical strategy to turn complex ideas into scalable SaaS solutions."
+            answer: "Saasential helps startups and enterprises design, build, and scale modern software systems - from concept to deployment. Our core services include:\n\n• SaaS architecture and development (full-stack, API-first platforms)\n• FinTech and payment system integration (ACH, cards, wallets, crypto rails, compliance mapping)\n• Technical documentation and developer portals (Wiki.js, Redocly, ReadMe)\n• Consulting and IT strategy, including infrastructure, automation, and digital transformation projects\n• Solution Engineers as needed\n\nWe combine software engineering, product design, and technical strategy to turn complex ideas into scalable SaaS solutions."
         },
         {
             question: "How long does it take to complete a project?",
@@ -225,13 +220,6 @@ export const automationContent = {
         link: {
             "label": "Astrolab Meeting Maker",
             "url": "https://www.meetingmaker.tech/"
-        }
-    },
-    {
-        text: "Once a meeting is booked, your Business Development Representative takes over using API Astrolab to visually demonstrate how your APIs actually work. In a focused 10-minute interactive session, prospects experience your technology in action, transforming early interest into clear understanding and a qualified conversion.",
-        link: {
-            "label": "API Astrolab",
-            "url": "https://www.apiastrolab.com/en/"
         }
     }
 ]
